@@ -1,7 +1,9 @@
 body
 {
 	margin: 0;
-	background-color: rgb(240, 174, 126);
+	
+	/*background-color: rgb(240, 174, 126);*/
+	background-image: url("img/bgImg.jpg");
 }
 #header 
 {
@@ -36,8 +38,24 @@ body
 #header #logo
 {
 	grid-rows: 1;
-	grid-area: 1 / 1 / 2 / 6;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	
 
+}
+
+#header #logo #logoImg
+{
+	position: flex;
+	margin: auto;
+	margin-top: 2%;
+	width: 40%;
+	height: 60%;
+	background-image: url("img/logo2.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	
 }
 
 #header #menu
