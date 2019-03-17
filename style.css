@@ -1,0 +1,106 @@
+body
+{
+	margin: 0;
+	background-color: rgb(240, 174, 126);
+}
+#header 
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 3fr 2fr;
+	position: sticky;
+	top: 0;
+	height: 200px;
+	width: 100%;
+	background-image: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+	
+}
+.zig-zag-bottom:after{
+		background: 
+					linear-gradient(-30deg, transparent 16px, rgb(92, 44, 9) 0), 
+					linear-gradient(30deg, transparent 16px, rgb(92, 44, 9)  0);
+        background-repeat: repeat-x;
+		background-position: left bottom;
+        background-size: 22px 32px;
+        content: "";
+        display: block;
+
+		width: 100%;
+		height: 20px;
+
+ 	    position: sticky;
+		top:64px;
+		left:0px;
+	}
+
+#header #logo
+{
+	grid-rows: 1;
+	grid-area: 1 / 1 / 2 / 6;
+
+}
+
+#header #menu
+{
+	display: grid;
+	grid-rows: 2;
+	grid-area: 2 / 1 / 3 / 6;
+	grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#header #menu .option
+{
+	border-right: 2px solid rgb(240, 174, 126);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 18pt;
+	display: flex;
+	justify-content: center;
+	font-weight: 900;
+}
+#header #menu .option:last-child
+{
+	border-right: none;
+}
+
+.option #home p:after
+{
+	content: '48 6f 6d 65';
+	
+}
+
+.option #home:hover p:after
+{
+	content: "-----Home-----";
+}
+
+.option #local p:after
+{
+	content: '4c 6f 63 61 6c';
+}
+
+.option #local:hover p:after
+{
+	content: '-----Local-----';
+}
+
+.option #drinks p:after
+{
+	content: '44 72 69 6e 6b 73';
+}
+
+.option #drinks:hover p:after
+{
+	content: '------Drinks------';
+}
+
+.option #contact p:after
+{
+	content: '43 6f 6e 74 61 63 74';
+}
+
+.option #contact:hover p:after
+{
+	content: '-------Contact-------';
+}
+
