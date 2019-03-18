@@ -1,7 +1,7 @@
 body{
     background: url(PozeProiect/background.jpg);
-    height: 100%;
-    width: 99.7%;
+    height: 100vh;
+    width: calc(100vw - 25px);
 }
 
 #logo{
@@ -17,15 +17,16 @@ body{
 
 .button{
     display: grid;
+    width: calc(100vw - 33px);
     grid-template-columns: 20% 20%;
     margin-bottom: 3%;
     margin-left: 5%;
     margin-right: 5%;
-    grid-gap: 60%;
+    grid-gap: 50%;
 }
 
 .button > div{
-    border: 0.1vw solid darkgray;
+    border: 3px solid darkgray;
     text-align: center;
     padding: 5%;
 }
@@ -45,7 +46,7 @@ body{
 }
 
 #visit{
-    width: 98.8vw;
+    width: calc(100vw - 33px);
     height: 40vw;
     margin-bottom: 5%;
 }
@@ -56,7 +57,7 @@ body{
 }
 
 #visit > div{
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     margin-top: -25%;
     margin-left: 20%;
 }
@@ -77,24 +78,43 @@ body{
 
 #descriere{
     display: grid;
-    grid-template-columns: 42% 50%;
+    width: calc(100vw - 33px);
+    grid-template-columns: 42% 46%;
     margin-left: 5%;
-    grid-gap: 5%;
+    grid-gap: 2%;
+    /*border: 1px solid black;*/
 }
 
 #descriere #imagine{
     /*border: 1px solid black;*/
     padding: 1%;
+    height: 22vw;
+    width: 100%;
+    margin-top: 7%;
+}
+
+#descriere img{
+    height: inherit;
+    width: inherit;
 }
 
 #descriere #text{
-   border: 0.1vw solid darkgray;
+    border: 3px solid darkgray;
+    height: 28vw;
+    width: 100%;
 }
 
 #descriere h1{
     font-size: 3vw;
+    margin-left: 3%;
 }
 
 #descriere p{
     font-size: 1.5vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+span{
+    margin-left: 8%;
 }
