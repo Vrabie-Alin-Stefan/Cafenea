@@ -11,10 +11,6 @@ body{
     width: 14%;
 }
 
-/*a:hover {
-    color: red;
-}*/
-
 .button{
     display: grid;
     width: calc(100vw - 33px);
@@ -57,7 +53,6 @@ body{
 }
 
 #visit > div{
-    /*border: 1px solid white;*/
     margin-top: -25%;
     margin-left: 20%;
 }
@@ -82,11 +77,9 @@ body{
     grid-template-columns: 42% 46%;
     margin-left: 5%;
     grid-gap: 2%;
-    /*border: 1px solid black;*/
 }
 
 #descriere #imagine{
-    /*border: 1px solid black;*/
     padding: 1%;
     height: 22vw;
     width: 100%;
