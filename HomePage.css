@@ -11,20 +11,30 @@ body{
     width: 14%;
 }
 
+/*a:hover {
+    color: red;
+}*/
+
 .button{
+    /*border: 1px solid black;*/
     display: grid;
     width: calc(100vw - 33px);
     grid-template-columns: 20% 20%;
     margin-bottom: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    grid-gap: 50%;
+    /*margin-left: 5%;
+    /*margin-right: 5%;*/
+    grid-gap: 55%;
 }
 
 .button > div{
-    border: 3px solid darkgray;
+    border: 0.25rem solid darkgray;
     text-align: center;
     padding: 5%;
+}
+
+#button1{
+    margin-left: 25%;
+    width: 88%;
 }
 
 .button a{
@@ -53,6 +63,7 @@ body{
 }
 
 #visit > div{
+    /*border: 1px solid white;*/
     margin-top: -25%;
     margin-left: 20%;
 }
@@ -75,15 +86,18 @@ body{
     display: grid;
     width: calc(100vw - 33px);
     grid-template-columns: 42% 46%;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     grid-gap: 2%;
+    /*border: 1px solid black;*/
 }
 
 #descriere #imagine{
+    /*border: 1px solid black;*/
     padding: 1%;
     height: 22vw;
     width: 100%;
     margin-top: 7%;
+    margin-left: 5%;
 }
 
 #descriere img{
@@ -92,9 +106,10 @@ body{
 }
 
 #descriere #text{
-    border: 3px solid darkgray;
-    height: 28vw;
+    border: 0.25rem solid darkgray;
+    height: 28.5vw;
     width: 100%;
+    margin-left: 5%;
 }
 
 #descriere h1{
