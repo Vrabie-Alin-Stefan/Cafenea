@@ -165,8 +165,15 @@ body > h1{
 
 .product input{
     font-size: 1.8vw;
-    width: calc(10% + 17px);
+    width: calc(10% + 17px); 
     height: 10%; 
     background-color: #fff8e3;
 }
-    
+
+.product input:invalid + span::after{
+  content: '\2715';
+}
+
+.product input:valid + span::after {
+  content: '\2713';
+}
