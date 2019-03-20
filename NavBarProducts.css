@@ -1,0 +1,122 @@
+body{
+    background: url(background.jpg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+}
+
+header{
+    background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+    height: 7.5vw;
+    width: inherit;
+    position: fixed;
+}
+
+header::after{
+    display: block;
+    content: "";
+    width: inherit;
+    height: 1vw; /*16%*/
+    min-height: 1em;
+    background: linear-gradient(-30deg, transparent 1em, #5c2c09 0), linear-gradient(30deg, transparent 1em, #5c2c09 0);
+    background-repeat: repeat-x;
+    background-size: 2vh auto; /*0.6em;/*0.6%;*/ /*22px;*/ /*1.5em;*/ /*32px;*/
+}
+
+nav{
+    display: grid;
+    height: inherit;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 7.5vw;
+}
+
+nav:last-child{
+    border-right: none;
+}
+
+nav div{
+    /*border: 1px solid white;*/
+    padding: 3%;
+    border-right: 2px solid rgb(240, 174, 126);
+}
+
+nav img{
+    /*height: 6vw;*/
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 2.5%;
+    
+}
+
+/*.pages{
+    justify-content: center;
+}*/
+
+.pages p{
+    /*border: 1px solid black;*/
+    text-align: center;
+    color: floralwhite;
+    padding: 3%;
+    font-size: 1.6vw;
+}
+
+.pages a{
+    text-decoration: none;
+}
+
+/*.pages a:visited{
+    color: blue;
+}
+
+#local a:visited{
+    color: blue;
+}*/
+
+#local p::after
+{
+	content: '4C 6F 63 61 6C';
+}
+
+#local:hover p::after
+{
+	content: '-----Local-----';
+    color: #e5ac23;
+}
+
+#local a:visited{
+    color: blue;
+}
+
+#menu p::after
+{
+	content: '4D 65 6E 69 75';
+}
+
+#menu:hover p::after
+{
+	content: '-----Meniu-----';
+    color: #e5ac23;
+}
+
+#products p::after
+{
+	content: '50 72 6F 64 75 73 65';
+    color:#bfbfbf;
+}
+
+#products:hover p::after
+{
+	content: '-----Produse-----';
+    color: #e5ac23;
+}
+
+#contact p::after
+{
+	content: '43 6F 6E 74 61 63 74';
+}
+
+#contact:hover p::after
+{
+	content: '-------Contact-------';
+    color: #e5ac23;
+}
