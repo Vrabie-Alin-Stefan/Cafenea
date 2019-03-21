@@ -1,0 +1,147 @@
+body{
+    background: url("../img/bgImg.jpg");
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+}
+
+footer
+{
+	margin-bottom: 0%;
+	background-color: black;
+	color: white;
+	height: auto;
+	text-align: center;
+}
+
+header{
+    background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+    height: 7.5vw;
+    width: inherit;
+    position: relative;
+}
+
+header::after{
+    display: block;
+    content: "";
+    width: inherit;
+    height: 1vw; 
+    min-height: 1em;
+    background: linear-gradient(-30deg, transparent 1em, #5c2c09 0), linear-gradient(30deg, transparent 1em, #5c2c09 0);
+    background-repeat: repeat-x;
+    background-size: 2vh auto;
+}
+
+nav{
+    display: grid;
+    height: inherit;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 7.5vw;
+}
+
+nav:last-child{
+    border-right: none;
+}
+
+nav div{
+    border-right: 2px solid rgb(240, 174, 126);
+}
+
+nav img{
+    width: 13%;
+    margin-left: 43%;
+    margin-top: 1.75%;
+}
+
+.pages p{
+    text-align: center;
+    color: floralwhite;
+    padding: 3%;
+    font-size: 1.6vw;
+}
+
+.pages a{
+    text-decoration: none;
+}
+
+#home p:after
+{
+	content: '48 6f 6d 65';
+	
+}
+
+#home:hover p:after
+{
+	content: "-----Home-----";
+}
+
+#contact p::after
+{
+	content: '43 6F 6E 74 61 63 74';
+    color:#bfbfbf;
+}
+
+#contact:hover p::after
+{
+	content: '-------Contact-------';
+    color: #e5ac23;
+}
+
+a
+{
+    color: currentColor;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+#content
+{
+	height: 80%;
+	width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr;
+    position: relative;
+	margin-top: 5%;
+}
+
+#presentation
+{
+	grid-column: 2;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.item
+{
+	width: 100%;
+	height: 50%;
+	display: flex;
+}
+
+
+.item .description
+{
+	height: 90%;
+	font-size: 1.3vw;
+	margin-left: 2px;
+	margin-right: 2px;
+	width: inherit;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+    font-family: cursive;
+    color: rgb(160, 77, 17)
+}
+
+@media (max-width: 500px) {
+	.item .description {
+		font-size: 2vw;
+	}
+  }
+  @media (max-width: 150px) {
+	.item .description {
+		font-size: 4vw;
+	}
+  }

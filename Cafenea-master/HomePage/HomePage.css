@@ -1,0 +1,129 @@
+body{
+    background: url(../img/bgImg.jpg);
+    height: 100vh;
+    width: calc(100vw - 25px);
+}
+
+footer
+{
+	margin-top: 10vh;
+	margin-bottom: 0%;
+	background-color: black;
+	color: white;
+	height: auto;
+	text-align: center;
+}
+
+
+#logo{
+    margin-left: 42.85%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    width: 14%;
+}
+
+
+.button{
+    display: grid;
+    width: calc(100vw - 33px);
+    grid-template-columns: 20% 20%;
+    margin-bottom: 3%;
+    grid-gap: 55%;
+}
+
+.button > div{
+    border: 0.2vw solid darkgray;
+    text-align: center;
+    padding: 5%;
+}
+
+#button1{
+    margin-left: 25%;
+    width: 88%;
+}
+
+.button a{
+    font-size: 2vw;
+    color: #9d5215;
+    text-decoration: none;
+}
+
+.button a:visited{
+    color: #432309;
+}
+
+.button a:hover, a:visited:hover{
+    color: #cd9718;
+}
+
+#visit{
+    width: calc(100vw - 33px);
+    height: 40vw;
+    margin-bottom: 5%;
+}
+
+#visit > img{
+    width: inherit;
+    height: inherit;
+}
+
+#visit > div{
+    margin-top: -25%;
+    margin-left: 20%;
+}
+
+#visit a {
+    font-size: 7vw;
+    color: floralwhite;
+    text-decoration: none;
+}
+
+#visit a:visited{
+    color: lightgray;
+}
+
+#visit a:hover, a:visited:hover{
+    color: #e5ac23;
+}
+
+#descriere{
+    display: grid;
+    width: calc(100vw - 33px);
+    grid-template-columns: 42% 46%;
+    grid-gap: 2%;
+}
+
+#descriere #imagine{
+    padding: 1%;
+    height: 22vw;
+    width: 100%;
+    margin-top: 7%;
+    margin-left: 5%;
+}
+
+#descriere img{
+    height: inherit;
+    width: inherit;
+}
+
+#descriere #text{
+    border: 0.2vw solid darkgray;
+    height: 28.5vw;
+    width: 100%;
+    margin-left: 5%;
+}
+
+#descriere h1{
+    font-size: 3vw;
+    margin-left: 3%;
+}
+
+#descriere p{
+    font-size: 1.5vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+span{
+    margin-left: 8%;
+}
