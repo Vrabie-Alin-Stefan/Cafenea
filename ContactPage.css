@@ -83,10 +83,6 @@ body > h1{
     margin-left: 10%;
 }
 
-#adress div{
-    /*border: 1px solid black;*/
-}
-
 #adress #map{
     height: 30vw;
     width: 100%;
@@ -120,10 +116,6 @@ body > h1{
     grid-template-columns: 43% 5.9% 29% 6%;
     margin-top: 3%;
     margin-left: 14%;
-}
-
-#section div{
-   /* border: 1px solid black;*/
 }
 
 #section p{
