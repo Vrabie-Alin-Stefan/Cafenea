@@ -3,40 +3,56 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>NavBar Contact</title>
-        <link rel="stylesheet" href="contact.css">
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="ContactPage.css">
     </head>
     <body>
         <header>
             <nav>
                 <div id="logo">
-                    <a href="../HomePage/HomePage.html"> <img src="../img/logo2.jpg" alt="Logo"> </a>
-                </div>
-                <div class="pages" id="home"> 
-                    <a href="../HomePage/HomePage.html"><p></p></a> 
+                    <a href="HomePage.html"> <img src="../img/logo2.jpg" alt="Logo"> </a>
                 </div>
                 <div class="pages" id="contact" > 
-                    <a href="../contact/contact.html"><p></p></a>
+                    <a href="contact.html"><p></p></a>
                 </div>
             </nav>
         </header>
-
-        <div id = "content">
-                <div id = "presentation">
-                    <div class = "item">
-                        <div class = "description">
-                            <br>
-                            <p>Ne puteti contacta la numarul de telefon +40 770906404</p>
-                            <p>Sau la adresa de email <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                </div>
+        <h1>Unde ne gasiti?</h1>
+        <div id="adress">
+            <div id="info">
+                <img src="../img/caffe-finder.jpg" alt="Finder">
+                <p><strong>Locatia noastra:</strong> Strada Lascăr Catargi nr. 50, Iași 700107;</p>
+                <p><strong>Program de functionare:</strong> Luni - Duminica: 10 a.m. - 12 p.m.;</p>
             </div>
-
+            <div id="map">
+                <img src="../img/SmallMap.jpg" alt="Map">
+            </div>
+        </div>
+        <div id="formular">
+            <p>Formular de contact</p>
+            <label id="first" for="nume">Nume:</label>
+            <input class="type1" required type="text" id="nume" name="name" minlength="1" maxlength="10" size="10"><span></span>
+            <label id="second" for="prenume">Prenume:</label>
+            <input class="type1" required type="text" id="prenume" name="name" minlength="1" maxlength="10" size="10"><span></span>
+            <br>
+            <label id="third" for="mesaj">Mesaj:</label>
+            <input class="type2" required type="text" id="mesaj" name="name" minlength="1" maxlength="120" size="10"><span></span>
+            <br>
+            <input class="type1" id="submit" type="submit" value="Trimite">
+        </div>
+        <div id="section">
+            <div><p>De asemenea ne puteti gasi si pe Facebook</p></div>
+            <div class="logo">
+                <a href="https://www.facebook.com/"><img id="facebook" src="../img/logo-facebook.png" alt="Logo Facebok"></a>
+            </div>
+            <div><p> sau ne puteti scrie un e-mail</p></div>
+            <div class="logo">
+                <a href="mailto:1337Cafe@gmail.com"><img id="gmail" src="../img/logo-gmail.png" alt="Logo Gmail"></a>
+            </div>
+        </div>
         <footer>
-				<p>Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
-				<p>Contact information: <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a>.</p>
-		</footer>
+            <p>Vrei o cafea buna, preparata de un specialist? Te asteptam sa ne vizitezi!</p>
+            <p id="special">Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
+        </footer>
     </body>
 </html>
