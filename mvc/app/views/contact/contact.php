@@ -1,0 +1,47 @@
+<html lang="ro">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../img/coffee-cup.png" type="image/x-icon"/>
+        <meta charset="UTF-8">  
+        <title>1337-Cafe</title>
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="logo">
+                    <a href="../HomePageController/index"> <img src="../img/logo2.jpg" alt="Logo"> </a>
+                </div>
+                <div class="pages" id="contact" > 
+                    <a href="../contactController/index"><p></p></a>
+                </div>
+            </nav>
+        </header>
+        <h1>Unde ne gasiti?</h1>
+        <div id="adress">
+            <div id="info">
+                <img src="../img/caffe-finder.jpg" alt="Finder">
+                <p><strong>Locatia noastra:</strong> Strada Lascăr Catargi nr. 50, Iași 700107;</p>
+                <p><strong>Program de functionare:</strong> Luni - Duminica: 10 a.m. - 12 p.m.;</p>
+            </div>
+            <div id="map">
+                <img src="../img/SmallMap.jpg" alt="Map">
+            </div>
+        </div>
+        
+        <div id="section">
+            <div><p>De asemenea ne puteti gasi si pe Facebook</p></div>
+            <div class="logo">
+                <a href="https://www.facebook.com/"><img id="facebook" src="../img/logo-facebook.png" alt="Logo Facebok"></a>
+            </div>
+            <div><p> sau ne puteti scrie un e-mail</p></div>
+            <div class="logo">
+                <a href="mailto:1337Cafe@gmail.com"><img id="gmail" src="../img/logo-gmail.png" alt="Logo Gmail"></a>
+            </div>
+        </div>
+        <footer>
+            <p>Vrei o cafea buna, preparata de un specialist? Te asteptam sa ne vizitezi!</p>
+            <p id="special">Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
+        </footer>
+    </body>
+</html>
