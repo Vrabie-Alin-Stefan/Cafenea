@@ -1,0 +1,32 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto&display=swap';
+
+body{
+    background-image: url(../img/403.jpg);
+    background-repeat: none;
+    background-size: 100vw 100vh;
+}
+
+button {
+    background-color:white;
+    color: #657c84;
+    border-color: #657c84;
+    text-align: center;
+    font-size: 1.7vw;
+    font-family: Roboto,sans-serif;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+button:hover {
+    background-color: #657c84;
+    color: floralwhite;
+    border: none;
+}
+
+@media only screen and (max-width: 750px) {
+    button {
+        font-size: 3.2vw !important;
+    }
+}
