@@ -88,6 +88,7 @@ class menuPageController extends Controller
             $table = $this->model('TableService'); // $local este obiectul model
             if($table->getTable($_SESSION['user_token']) == 0)
             {
+                echo $table->getTable($_SESSION['user_token']);
                 $table->SetTable($masa, $_SESSION['user_token']);
             }
             $this->view('MenuPage/MenuPage');

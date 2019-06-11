@@ -12,7 +12,7 @@ class TableService
 
     public function getTable($token)
     {
-        $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."'";
+        $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."' AND numberTableOcupied != NULL";
         $result = $this->con->query($sql);
 
         $num = $result->num_rows;
@@ -51,7 +51,7 @@ class TableService
             while($row = $result->fetch_assoc()) {
                 if(time() - $row["updated_at"] > 20)
                 {
-                    RemoveTable($row["numberTableOcupied"]);
+                    $this->RemoveTable($row["numberTableOcupied"]);
                 }
                 else
                 {
