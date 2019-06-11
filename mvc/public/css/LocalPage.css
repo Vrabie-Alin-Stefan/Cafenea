@@ -224,128 +224,17 @@ a
     content: 'Ocupat';
 }
 
-#masa1 .ocupat::after
+.ocupat
 {
     color: red;
-    content: 'Ocupat';
 }
 
-#masa2 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa3 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa4 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa5 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa6 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa7 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa8 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa9 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#masa10 .ocupat::after
-{
-    color: red;
-    content: 'Ocupat';
-}
-
-#bar .liber::after
+.liber
 {
     color: greenyellow;
-    content: 'Liber';
 }
 
-#masa1 .liber::after
+.myTable
 {
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa2 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa3 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa4 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa5 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa6 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa7 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa8 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa9 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
-}
-
-#masa10 .liber::after
-{
-    color: greenyellow;
-    content: 'Liber';
+    color: blue;
 }

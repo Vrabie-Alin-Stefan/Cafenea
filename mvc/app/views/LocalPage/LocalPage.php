@@ -30,17 +30,25 @@
             <div id = "local">
                 <div id = "localImage">
                     <?php
+                   // session_start();
                     $index = 0;
                     for($i = 1; $i < 11; $i++)
                     {
                         if(in_array($i,$data))
                         {
-                            echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat"></span></div>';
+                            if($_SESSION['myTable'] == $data[$index])
+                            {
+                                echo '<div id = "masa' . $data[$index] . '"><span class = "myTable">Masa mea</span></div>';
+                            }
+                            else
+                            {
+                                echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat' . $data[$index] . '</span></div>';
+                            }
                             $index++;
                         }
                         else
                         {
-                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . ($i + 1) . '\';"><span class = "liber"></span></div>';
+                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\';"><span class = "liber">Liber' . $i . '</span></div>';
                         }
                     }
                       ?>

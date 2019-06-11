@@ -10,6 +10,16 @@ class TableService
         //require_once '../con.php';
     }
 
+    public function getTable($token)
+    {
+        $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."'";
+        $result = $this->con->query($sql);
+
+        $num = $result->num_rows;
+        
+        return $num;
+    }
+
     public function SetTable($masa, $token)
     {
         $sql = "UPDATE `user` SET numberTableOcupied=" . $masa . " WHERE token='" .$token . "'";
@@ -18,7 +28,6 @@ class TableService
         } else {
             echo "Error updating record: " . $this->con->error;
         }
-        $this->con->close();
     }
 
     public function GetOcupiedTables()
@@ -33,7 +42,6 @@ class TableService
                 $index++;
             }
         }
-        $this->con->close();
 
         return $tables;
     }

@@ -17,24 +17,18 @@ class UserService
 
         $num = $result->num_rows;
         
-
-        $this->con->close();
         return $num;
     }
 
     public function SetUser($token)
     {
-        require_once '../app/models/DBconn.php';
-        $sql = "INSERT INTO `user` (token, created_at, updated_at)
-        VALUES ('" . $token . "', " . date("Y-m-d") . ", " . date("Y-m-d") . ")";
+        $sql = "INSERT INTO `user` (`token`, `created_at`, `updated_at`) VALUES ('" . $token . "', " . date("Y-m-d") . ", " . date("Y-m-d") . ")";
         
         if ($this->con->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $this->con->error;
         }
-        
-        $this->con->close();
         
     }
 }
