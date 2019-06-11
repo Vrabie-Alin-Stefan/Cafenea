@@ -29,7 +29,22 @@
         <div id = "content">
             <div id = "local">
                 <div id = "localImage">
-                    <div id = "bar" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/1';"><span class = "comanda"></span></div>
+                    <?php
+                    $index = 0;
+                    for($i = 1; $i < 11; $i++)
+                    {
+                        if(in_array($i,$data))
+                        {
+                            echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat"></span></div>';
+                            $index++;
+                        }
+                        else
+                        {
+                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . ($i + 1) . '\';"><span class = "liber"></span></div>';
+                        }
+                    }
+                      ?>
+                   <!--
                     <div id = "masa1" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/2';"><span class = "ocupat"></span></div>
                     <div id = "masa2" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/3';"><span class = "ocupat"></span></div>
                     <div id = "masa3" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/4';"><span class = "ocupat"></span></div>
@@ -40,6 +55,7 @@
                     <div id = "masa8" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/9';"><span class = "ocupat"></span></div>
                     <div id = "masa9" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/10';"><span class = "ocupat"></span></div>
                     <div id = "masa10" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/11';"><span class = "ocupat"></span></div>
+                -->
                 </div>
             </div>
         </div>

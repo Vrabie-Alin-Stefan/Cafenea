@@ -16,9 +16,10 @@ class UserService
         $result = $this->con->query($sql);
 
         $num = $result->num_rows;
-        return $num;
+        
 
         $this->con->close();
+        return $num;
     }
 
     public function SetUser($token)

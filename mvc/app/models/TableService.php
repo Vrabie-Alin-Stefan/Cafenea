@@ -20,4 +20,21 @@ class TableService
         }
         $this->con->close();
     }
+
+    public function GetOcupiedTables()
+    {
+        $sql = "SELECT numberTableOcupied FROM `user`";
+        $result = $this->con->query($sql);
+        $tables = [];
+        $index = 0;
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $tables[$index] = $row["numberTableOcupied"];
+                $index++;
+            }
+        }
+        $this->con->close();
+
+        return $tables;
+    }
 }

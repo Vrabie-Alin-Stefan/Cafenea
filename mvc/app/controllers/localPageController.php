@@ -70,8 +70,13 @@ class localPageController extends Controller
         if($this->referer() == true) 
         {
             session_start();
-            $this->view('LocalPage/LocalPage');
             
+            $ocupiedTables = [];
+            $table = $this->model('TableService'); // $local este obiectul model
+            $ocupiedTables = $table->GetOcupiedTables();
+
+
+            $this->view('LocalPage/LocalPage', $ocupiedTables);
             //echo '<br>' . htmlspecialchars($_SESSION['user_token']);
             //echo '<br>' . $_COOKIE["latitude"];
             //echo '<br>' . $_COOKIE["longitude"];

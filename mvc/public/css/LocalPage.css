@@ -142,7 +142,7 @@ a
     font-family: "Courier New", Courier, monospace;
     font-size: 16pt;
     text-align: center;
-    color: red;
+    
 }
 
 #bar
@@ -218,58 +218,134 @@ a
 
 }
 
-#bar:hover .comanda::after
+#bar .ocupat::after
 {
-    content: 'Comanda';
-}
-
-#masa1:hover .ocupat::after
-{
+    color: red;
     content: 'Ocupat';
 }
 
-#masa2:hover .ocupat::after
+#masa1 .ocupat::after
 {
-    
+    color: red;
     content: 'Ocupat';
 }
 
-#masa3:hover .ocupat::after
+#masa2 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa4:hover .ocupat::after
+#masa3 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa5:hover .ocupat::after
+#masa4 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa6:hover .ocupat::after
+#masa5 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa7:hover .ocupat::after
+#masa6 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa8:hover .ocupat::after
+#masa7 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa9:hover .ocupat::after
+#masa8 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
 }
 
-#masa10:hover .ocupat::after
+#masa9 .ocupat::after
 {
+    color: red;
     content: 'Ocupat';
+}
+
+#masa10 .ocupat::after
+{
+    color: red;
+    content: 'Ocupat';
+}
+
+#bar .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa1 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa2 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa3 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa4 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa5 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa6 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa7 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa8 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa9 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
+}
+
+#masa10 .liber::after
+{
+    color: greenyellow;
+    content: 'Liber';
 }
