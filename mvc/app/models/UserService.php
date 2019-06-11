@@ -22,7 +22,7 @@ class UserService
 
     public function SetUser($token)
     {
-        $sql = "INSERT INTO `user` (`token`, `created_at`, `updated_at`) VALUES ('" . $token . "', " . date("Y-m-d") . ", " . date("Y-m-d") . ")";
+        $sql = "INSERT INTO `user` (`token`, `created_at`, `updated_at`) VALUES ('" . $token . "', " . date("Y-m-d") . ", " . time() . ")";
         
         if ($this->con->query($sql) === TRUE) {
             echo "New record created successfully";

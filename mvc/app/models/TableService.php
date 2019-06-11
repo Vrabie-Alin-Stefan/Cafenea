@@ -30,16 +30,35 @@ class TableService
         }
     }
 
+    public function RemoveTable($masa)
+    {
+        $sql = "DELETE FROM `user` WHERE numberTableOcupied='" .$masa . "'";
+
+        if ($this->con->query($sql) === TRUE) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . $this->con->error;
+        }
+    }
+
     public function GetOcupiedTables()
     {
-        $sql = "SELECT numberTableOcupied FROM `user`";
+        $sql = "SELECT * FROM `user`";
         $result = $this->con->query($sql);
         $tables = [];
         $index = 0;
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $tables[$index] = $row["numberTableOcupied"];
-                $index++;
+                if(time() - $row["updated_at"] > 20)
+                {
+                    RemoveTable($row["numberTableOcupied"]);
+                }
+                else
+                {
+                    $tables[$index] = $row["numberTableOcupied"];
+                    $index++;
+                }
+                
             }
         }
 
