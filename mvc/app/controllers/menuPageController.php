@@ -69,9 +69,7 @@ class menuPageController extends Controller
     {
         if($this->referer()) 
         {
-            $local = $this->model('productsModel'); // $local este obiectul model
-            $local->name = $token;
-            $this->view('MenuPage/MenuPage', ['name' => $local->name]);
+            $this->view('MenuPage/MenuPage');
         }
     }
 
@@ -80,8 +78,13 @@ class menuPageController extends Controller
         if($this->referer())
         {
             //$masa = $_GET['masa'];
-            $local = $this->model('productsModel'); // $local este obiectul model
-            $this->view('MenuPage/MenuPage', ['masa' => $local->name]);
+            session_start();
+            $user = $this->model('UserService');
+            if($user->getUser($_SESSION['user_token']) == 0)
+                $user->SetUser($_SESSION['user_token']);
+            $table = $this->model('TableService'); // $local este obiectul model
+            $table->SetTable($masa, $_SESSION['user_token']);
+            $this->view('MenuPage/MenuPage');
         }
     }
 }

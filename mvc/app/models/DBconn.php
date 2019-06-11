@@ -5,4 +5,7 @@ $ServerUsername = "root";
 $ServerPassword = "";
 $dbname = "project";
 
-$conn = mysqli_connect($servername, $ServerUsername, $ServerPassword, $dbname);
+$conn = new mysqli($servername, $ServerUsername, $ServerPassword, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
