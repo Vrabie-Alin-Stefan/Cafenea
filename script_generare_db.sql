@@ -3,8 +3,8 @@ create table `User` (
     token varchar(64) not null, 
     numberTableOcupied int,
     age int,
-    created_at timestamp,
-    updated_at timestamp,
+    created_at int(12),
+    updated_at int(12),
     PRIMARY KEY (id),
     INDEX(id)
 ) ENGINE=InnoDB;
@@ -14,8 +14,8 @@ create table Product (
     productName varchar(100) not null,
     price double not null,
     productStock int not null,
-    created_at timestamp,
-    updated_at timestamp,
+    created_at int(12),
+    updated_at int(12),
     PRIMARY KEY (id),
     INDEX(id)
 ) ENGINE=InnoDB;
@@ -27,8 +27,8 @@ create table `Order` (
     orderedQuantity int not null,
     orderDate date not null,
     billPrice double not null,
-    created_at timestamp,
-    updated_at timestamp,
+    created_at int(12),
+    updated_at int(12),
     PRIMARY KEY(id),
     INDEX (id_user),
     INDEX (id_product),
