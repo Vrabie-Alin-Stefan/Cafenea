@@ -27,7 +27,7 @@ header::after{
 nav{
     display: grid;
     height: inherit;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 7.5vw;
 }
 
@@ -40,16 +40,16 @@ nav div{
 }
 
 nav img{
-    width: 13%;
-    margin-left: 43%;
+    width: 18%;
+    margin-left: 40%;
     margin-top: 1.75%;
 }
 
 .pages p{
     text-align: center;
     color: floralwhite;
-    padding: 3%;
-    font-size: 1.6vw;
+    padding: 2%;
+    font-size: 2vw;
 }
 
 .pages a{
@@ -58,13 +58,18 @@ nav img{
 
 #contact p::after
 {
-	content: '43 6F 6E 74 61 63 74';
+	content: 'Contact';
+}
+
+#wiki p::after
+{
+	content: '57 69 6b 69';
     color:#bfbfbf;
 }
 
-#contact:hover p::after
+#wiki:hover p::after
 {
-	content: '-------Contact-------';
+	content: '-------Wiki-------';
     color: #e5ac23;
 }
 

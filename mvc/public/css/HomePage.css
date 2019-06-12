@@ -72,18 +72,21 @@ footer
     margin-left: 20%;
 }
 
-#visit a {
+#visit button {
+    background-color: transparent;
+    border: none;
     font-size: 7vw;
     color: floralwhite;
     text-decoration: none;
+    outline:none;
 }
 
-#visit a:visited{
-    color: lightgray;
-}
-
-#visit a:hover, a:visited:hover{
+#visit button:hover{
     color: #e5ac23;
+}
+
+#visit button:active{
+    color: lightgray;
 }
 
 #descriere{

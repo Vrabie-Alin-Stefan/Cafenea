@@ -12,14 +12,18 @@ class localPageController extends Controller
                 $ref_page = strtok('/');
             }
             $ref_page = strtok('/'); 
-            if($ref_page != 'home' && $ref_page != 'confirmation') // Pagini care nu pt fi accesate
+            
+            if($ref_page == 'contact' || $ref_page == 'menu') //Pagini care sunt tratate diferit 
             {
-                $this->view('Errors/403Page');
-                echo '<button onclick="location.href=\'' . $_SERVER['HTTP_REFERER'] . '\'">Intoarceti-va la pagina anterioara</button>';
+                $this->view('LocalPage/LocalPage');        
+            }
+            else if($ref_page != 'home' && $ref_page != 'error') // Pagini care nu pt fi accesate
+            {
+                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/' . $ref_page . '"; </script>';
             } 
             else // Pagini care pot fi accesate
             {
-                return true;
+               return true;
             }
         } 
         else // cand nu este nici un referer
@@ -34,7 +38,7 @@ class localPageController extends Controller
                         <p id="error">S-a produs o eroare!</p>
                         <p id="text-error">Nu puteti deschide pagina, deoarece nu va este permis accesul direct la ea.</p> 
                         <p id="text-counter">Veti fi redirectionat in <span id="counter">5</span> secunde la pagina de inceput, daca nu apasati butonul.</p>
-                        <button onclick="location.href=\'http:///localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
+                        <button onclick="location.href=\'http://localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
                         <script type="text/javascript">
                             function countdown() {
                                 var i = document.getElementById(\'counter\');
@@ -60,7 +64,7 @@ class localPageController extends Controller
                     }
                 </script>
                 <script type="text/javascript">
-                    setInterval(function() {  location.href = "http:///localhost/www.httpcafe.com/home";  }, 6000);
+                    setInterval(function() {  location.href = "http://localhost/www.httpcafe.com/home";  }, 6000);
                 </script>';
         }
     }
@@ -69,36 +73,27 @@ class localPageController extends Controller
     {
         if($this->referer() == true) 
         {
-            session_start();
             
             $ocupiedTables = [];
             $table = $this->model('TableService'); // $local este obiectul model
             $ocupiedTables = $table->GetOcupiedTables();
-
-            $this->view('LocalPage/LocalPage', $ocupiedTables);
+            
+            session_start();
+            $user=$this->model('UserService');
+            $value = $user->findUserTable($_SESSION['user_token']);
+            if(isset($value))
+            {
+                echo '<script type="text/javascript"> location.href = "http://localhost/www.httpcafe.com/menu"; </script>';
+            } 
+            else 
+            {
+                $this->view('LocalPage/LocalPage', $ocupiedTables);
+            }
             //echo '<br>' . htmlspecialchars($_SESSION['user_token']);
             //echo '<br>' . $_COOKIE["latitude"];
             //echo '<br>' . $_COOKIE["longitude"];
         }
         
-        /*if(isset($_SERVER['HTTP_REFERER']))
-        {
-            if($_SERVER['HTTP_REFERER'] == "http://localhost/www.httpcafe.com/home")
-            {
-                $local = $this->model('LocalModel'); // $local este obiectul model
-                $local->name = $token;
-                
-                $this->view('LocalPage/LocalPage', ['name' => $local->name]);
-            }
-            else
-            {
-                $this->view('Errors/403Page');
-            }
-        }
-        else
-        {
-            $this->view('Errors/403Page');
-        }*/
     }
 
     public function AtomFeed()

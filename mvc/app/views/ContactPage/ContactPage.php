@@ -5,6 +5,9 @@
         <meta charset="UTF-8">  
         <title>1337-Cafe</title>
         <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ContactPage.css">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
     </head>
     <body>
         <header>
@@ -13,7 +16,10 @@
                     <a href="http://localhost/www.httpcafe.com/home"> <img src="http://localhost/www.httpcafe.com/img/logo2.jpg" alt="Logo"> </a>
                 </div>
                 <div class="pages" id="contact" > 
-                    <a href="http://localhost/www.httpcafe.com/contact"><p></p></a>
+                    <p></p>
+                </div>
+                <div class="pages" id="wiki" > 
+                    <a href="http://localhost/www.httpcafe.com/wiki"><p></p></a>
                 </div>
             </nav>
         </header>
@@ -43,5 +49,8 @@
             <p>Vrei o cafea buna, preparata de un specialist? Te asteptam sa ne vizitezi!</p>
             <p id="special">Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
         </footer>
+        <script type="text/javascript">
+            document.cookie = "url_previous_page =" + window.location.href + "; path=/";
+        </script>
     </body>
 </html>

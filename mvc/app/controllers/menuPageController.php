@@ -12,10 +12,14 @@ class menuPageController extends Controller
                 $ref_page = strtok('/');
             }
             $ref_page = strtok('/'); 
-            if($ref_page != 'local' && $ref_page != 'products' && $ref_page != 'confirmation') // Pagini care nu pt fi accesate
+            
+            if($ref_page == 'contact' || $ref_page == 'home') //Pagini care sunt tratate diferit 
             {
-                $this->view('Errors/403Page');
-                echo '<button onclick="location.href=\'' . $_SERVER['HTTP_REFERER'] . '\'">Intoarceti-va la pagina anterioara</button>';
+                $this->view('MenuPage/MenuPage');        
+            }     
+            else if($ref_page != 'local' && $ref_page != 'products' && $ref_page != 'confirmation' && $ref_page != 'error') // Pagini care nu pt fi accesate
+            {
+                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/' . $ref_page . '"; </script>';
             } 
             else // Pagini care pot fi accesate
             {
@@ -34,7 +38,7 @@ class menuPageController extends Controller
                         <p id="error">S-a produs o eroare!</p>
                         <p id="text-error">Nu puteti deschide pagina, deoarece nu va este permis accesul direct la ea.</p> 
                         <p id="text-counter">Veti fi redirectionat in <span id="counter">5</span> secunde la pagina de inceput, daca nu apasati butonul.</p>
-                        <button onclick="location.href=\'http:///localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
+                        <button onclick="location.href=\'http://localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
                         <script type="text/javascript">
                             function countdown() {
                                 var i = document.getElementById(\'counter\');
@@ -60,12 +64,12 @@ class menuPageController extends Controller
                     }
                 </script>
                 <script type="text/javascript">
-                    setInterval(function() {  location.href = "http:///localhost/www.httpcafe.com/home";  }, 6000);
+                    setInterval(function() {  location.href = "http://localhost/www.httpcafe.com/home";  }, 6000);
                 </script>';
         }
     }
     
-    public function index($token = '')
+    public function index()
     {
         if($this->referer()) 
         {
@@ -77,18 +81,17 @@ class menuPageController extends Controller
     {
         if($this->referer())
         {
-            //$masa = $_GET['masa'];
             session_start();
             $user = $this->model('UserService');
             if($user->getUser($_SESSION['user_token']) == 0)
             {
                 $_SESSION['myTable'] = $masa;
-                $user->SetUser($_SESSION['user_token']);
+                $user->setUser($_SESSION['user_token']);
             }
             $table = $this->model('TableService'); // $local este obiectul model
             if($table->getTable($_SESSION['user_token']) == 0)
             {
-                echo $table->getTable($_SESSION['user_token']);
+                //echo $table->getTable($_SESSION['user_token']);
                 $table->SetTable($masa, $_SESSION['user_token']);
             }
             $this->view('MenuPage/MenuPage');

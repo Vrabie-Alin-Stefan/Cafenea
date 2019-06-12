@@ -12,10 +12,14 @@ class confirmationPageController extends Controller
                 $ref_page = strtok('/');
             }
             $ref_page = strtok('/'); 
-            if($ref_page != 'products') // Pagini care nu pt fi accesate
+            
+            if($ref_page == 'contact' || $ref_page == 'home' || $ref_page == 'menu') //Pagini care sunt tratate diferit 
             {
-                $this->view('Errors/403Page');
-                echo '<button onclick="location.href=\'' . $_SERVER['HTTP_REFERER'] . '\'">Intoarceti-va la pagina anterioara</button>';
+                $this->view('ConfirmationPage/ConfirmationPage');        
+            }
+            else if($ref_page != 'products' && $ref_page != 'error') // Pagini care nu pt fi accesate
+            {
+                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/' . $ref_page . '"; </script>';
             } 
             else // Pagini care pot fi accesate
             {
@@ -34,7 +38,7 @@ class confirmationPageController extends Controller
                         <p id="error">S-a produs o eroare!</p>
                         <p id="text-error">Nu puteti deschide pagina, deoarece nu va este permis accesul direct la ea.</p> 
                         <p id="text-counter">Veti fi redirectionat in <span id="counter">5</span> secunde la pagina de inceput, daca nu apasati butonul.</p>
-                        <button onclick="location.href=\'http:///localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
+                        <button onclick="location.href=\'http://localhost/www.httpcafe.com/home\';">Mergiti la pagina principala</button> 
                         <script type="text/javascript">
                             function countdown() {
                                 var i = document.getElementById(\'counter\');
@@ -60,7 +64,7 @@ class confirmationPageController extends Controller
                     }
                 </script>
                 <script type="text/javascript">
-                    setInterval(function() {  location.href = "http:///localhost/www.httpcafe.com/home";  }, 6000);
+                    setInterval(function() {  location.href = "http://localhost/www.httpcafe.com/home";  }, 6000);
                 </script>';
         }
     }
@@ -68,9 +72,9 @@ class confirmationPageController extends Controller
     public function index($token = '')
     {
         if($this->referer()) {
-            $local = $this->model('confirmationModel'); // $local este obiectul model
+            //$local = $this->model('confirmationModel'); // $local este obiectul model
             //$local->name = $token;
-            $this->view('ConfirmationPage/ConfirmationPage', ['name' => $local->name]);
+            $this->view('ConfirmationPage/ConfirmationPage');
         }
     }
 }

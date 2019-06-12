@@ -7,7 +7,6 @@ class TableService
     {
         include('../app/models/DBconn.php');
         $this->con = $conn;
-        //require_once '../con.php';
     }
 
     public function getTable($token)
@@ -22,22 +21,22 @@ class TableService
 
     public function SetTable($masa, $token)
     {
-        $sql = "UPDATE `user` SET numberTableOcupied=" . $masa . " WHERE token='" .$token . "'";
+        $sql = "UPDATE `user` SET numberTableOcupied=" . $masa . ", updated_at=" . time() . " WHERE token='" .$token . "'";
         if ($this->con->query($sql) === TRUE) {
-            echo "Record updated successfully";
+            echo '<script type="text/javascript"> console.log("Record updated successfully"); </script>';
         } else {
             echo "Error updating record: " . $this->con->error;
         }
     }
 
-    public function RemoveTable($masa)
+    public function removeTable($token)
     {
-        $sql = "DELETE FROM `user` WHERE numberTableOcupied='" .$masa . "'";
+        $sql = "UPDATE `user` SET numberTableOcupied = NULL, updated_at=" . time() . " WHERE token='" .$token . "'";
 
         if ($this->con->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+            echo '<script type="text/javascript"> console.log("Record updated successfully table"); </script>';
         } else {
-            echo "Error deleting record: " . $this->con->error;
+            echo "Error updating record: " . $this->con->error;
         }
     }
 
@@ -49,16 +48,18 @@ class TableService
         $index = 0;
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                if(time() - $row["updated_at"] > 100)
+                if(isset($row["numberTableOcupied"]))
                 {
-                    $this->RemoveTable($row["numberTableOcupied"]);
+                    if(time() - $row["updated_at"] > 100)
+                    {
+                        $this->removeTable($row["token"]);
+                    }
+                    else
+                    {
+                        $tables[$index] = $row["numberTableOcupied"];
+                        $index++;
+                    }
                 }
-                else
-                {
-                    $tables[$index] = $row["numberTableOcupied"];
-                    $index++;
-                }
-                
             }
         }
 
@@ -73,20 +74,22 @@ class TableService
         $index = 0;
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                if(time() - $row["updated_at"] > 100)
+                if(isset($row["numberTableOcupied"]))
                 {
-                    $this->RemoveTable($row["numberTableOcupied"]);
-                }
-                else
-                {
+                    if(time() - $row["updated_at"] > 100)
+                    {
+                        $this->removeTable($row["token"]);
+                    }
+                    else
+                    {
 
-                    $tables[$index] = [];
-                    $tables[$index]['id'] = $row['id'];
-                    $tables[$index]['table'] = $row['numberTableOcupied'];
-                    $tables[$index]['updated'] = date("Y-m-d", $row['updated_at']);
-                    $index++;
+                        $tables[$index] = [];
+                        $tables[$index]['id'] = $row['id'];
+                        $tables[$index]['table'] = $row['numberTableOcupied'];
+                        $tables[$index]['updated'] = date("Y-m-d", $row['updated_at']);
+                        $index++;
+                    }
                 }
-                
             }
         }
 

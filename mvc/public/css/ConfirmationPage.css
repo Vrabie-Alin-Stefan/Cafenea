@@ -1,30 +1,19 @@
-body
-{
-    margin: 0%;
-    width: 100vw;
+body{
+    background: url("../img/bgImg.jpg");
+    width: calc(100vw - 17px);
     height: 100vh;
-	background-image: url("../img/bgImg.jpg");
+    margin: 0;
 }
 
-footer
-{
-	margin-bottom: 0%;
-	background-color: black;
-	color: white;
-	height: auto;
-	text-align: center;
-}
-
-header 
-{
-    
-	background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+header{
+    background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
     height: 7.5vw;
     width: inherit;
-    position: relative;
-	
+    position: fixed;
+    margin-top: -5vw;
 }
-header:after{
+
+header::after{
     display: block;
     content: "";
     width: inherit;
@@ -38,7 +27,7 @@ header:after{
 nav{
     display: grid;
     height: inherit;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 7.5vw;
 }
 
@@ -47,51 +36,49 @@ nav:last-child{
 }
 
 nav div{
-    padding: 2%;
     border-right: 2px solid rgb(240, 174, 126);
 }
 
 nav img{
-    width: 20%;
-    margin-left: 39%;
-    margin-top: 0.5%;
+    width: 24%;
+    margin-left: 37%;
+    margin-top: 3.2%;
 }
-
 
 .pages p{
     text-align: center;
     color: floralwhite;
-    padding: 3%;
-    font-size: 1.6vw;
+    padding: 2%;
+    font-size: 2vw;
 }
 
+.pages a{
+    text-decoration: none;
+}
 
-#home p:after
+#menu p:after
 {
-	content: '48 6f 6d 65';
+	content: '4D 65 6E 69 75';
+    color:#bfbfbf;
 	
 }
 
-#home:hover p:after
+#menu:hover p:after
 {
-	content: "-----Home-----";
+	content: '-----Meniu-----';
 	color: #e5ac23;
 }
 
-#local p:after
+#order p:after
 {
-	content: '4c 6f 63 61 6c';
+	content: 'Comanda';
 }
 
-#local:hover p:after
-{
-	content: '-----Local-----';
-	color: #e5ac23;
-}
 
 #contact p:after
 {
 	content: '43 6f 6e 74 61 63 74';
+    color:#bfbfbf;
 }
 
 #contact:hover p:after
@@ -100,12 +87,6 @@ nav img{
 	color: #e5ac23;
 }
 
-a
-{
-    color: currentColor;
-    opacity: 0.5;
-    text-decoration: none;
-}
 
 #content
 {
@@ -114,8 +95,8 @@ a
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 	grid-template-rows: 1fr;
-    position: relative;
-	margin-top: 5%;
+	margin-top: 5vw;
+    padding-top: 5%;
 }
 
 #presentation
@@ -191,4 +172,13 @@ a
     width: 20%;
     height: 20%;
 
+}
+
+footer
+{
+	margin-bottom: 0%;
+	background-color: black;
+	color: white;
+	height: auto;
+	text-align: center;
 }

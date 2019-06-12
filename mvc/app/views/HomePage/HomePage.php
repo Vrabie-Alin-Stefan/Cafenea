@@ -6,6 +6,9 @@
         <meta charset="UTF-8">  
         <title>1337-Cafe</title>
         <link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/HomePage.css">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
     </head>
     <body>
         <header>
@@ -22,7 +25,7 @@
         <div id="visit">
             <img src="http://localhost/www.httpcafe.com/img/VisitCaffeImage.jpg" alt="Cafe Image">
             <div>
-                <a href="http://localhost/www.httpcafe.com/local" onclick="getLocation()">Viziteaza 1337 Café</a>
+                <button onclick="getLocation()" href="http://localhost/www.httpcafe.com/local">Viziteaza 1337 Café</button>
                 <script type="text/javascript">
                 function getLocation() {
                     if(navigator.geolocation) {
@@ -33,8 +36,8 @@
                                 {
                                     navigator.geolocation.getCurrentPosition(function(position) 
                                     {
-                                        document.cookie = "latitude =" + position.coords.latitude;
-                                        document.cookie = "longitude =" + position.coords.longitude;
+                                        document.cookie = "latitude =" + position.coords.latitude + "; path=/";
+                                        document.cookie = "longitude =" + position.coords.longitude + "; path=/";
                                         location.href = "http://localhost/www.httpcafe.com/local"
                                     });
                                 } 
@@ -62,5 +65,8 @@
             <p>Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
             <p>Contact information: <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a>.</p>
         </footer>
+        <script type="text/javascript">
+            document.cookie = "url_previous_page =" + window.location.href + "; path=/";
+        </script>
     </body>
 </html>

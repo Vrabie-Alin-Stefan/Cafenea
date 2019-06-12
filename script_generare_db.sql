@@ -75,6 +75,8 @@ insert into Product (productName,price,productStock,created_at,updated_at) value
 --insert into `Order` (id_user,id_product,orderedQuantity,orderDate,billPrice,created_at,updated_at) values (1,1,1,now(),5,now(),now());
 --select * from `Order` where id=1;
 
+-- UPDATE `user` SET numberTableOcupied = NULL WHERE token='eo0!5lQ*RL7g^c,jN/0QF?<]92%^)ncv';
+
 
 
 

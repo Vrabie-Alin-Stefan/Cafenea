@@ -28,7 +28,7 @@ header::after{
 nav{
     display: grid;
     height: inherit;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 nav:last-child{
@@ -36,46 +36,32 @@ nav:last-child{
 }
 
 nav div{
-    padding: 3%;
     border-right: 2px solid rgb(240, 174, 126);
 }
 
 nav img{
-    width: 30%;
-    margin-left: 33%;
-    margin-top: 2.5%;
+    width: 24%;
+    margin-left: 37%;
+    margin-top: 3.2%;
     
 }
 
 .pages p{
     text-align: center;
     color: floralwhite;
-    padding: 3%;
-    font-size: 1.6vw;
+    padding: 2%;
+    font-size: 2vw;
 }
 
 .pages a{
     text-decoration: none;
 }
 
-#local p::after
-{
-	content: '4C 6F 63 61 6C';
-}
-
-#local:hover p::after
-{
-	content: '-----Local-----';
-    color: #e5ac23;
-}
-
-#local a:visited{
-    color: blue;
-}
 
 #menu p::after
 {
 	content: '4D 65 6E 69 75';
+    color:#bfbfbf;
 }
 
 #menu:hover p::after
@@ -86,19 +72,14 @@ nav img{
 
 #products p::after
 {
-	content: '50 72 6F 64 75 73 65';
-    color:#bfbfbf;
+	content: 'Produse';
 }
 
-#products:hover p::after
-{
-	content: '-----Produse-----';
-    color: #e5ac23;
-}
 
 #contact p::after
 {
 	content: '43 6F 6E 74 61 63 74';
+    color:#bfbfbf;
 }
 
 #contact:hover p::after

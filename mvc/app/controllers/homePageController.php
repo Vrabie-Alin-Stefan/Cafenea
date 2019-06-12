@@ -9,43 +9,19 @@ class homePageController extends Controller
         if(!isset($_COOKIE['userCookie']))
         {
             setcookie('userCookie',  "\x00", time() + 60 * 60); // 1 ora
-            $gen = new TokenGenerator;
             
+            if(isset($_SESSION['user_token'])) 
+            {
+                $user=$this->model('UserService');
+                $user->removeUser($_SESSION['user_token']);
+            }
+            
+            $gen = new TokenGenerator;
             $_SESSION['user_token'] = $gen->generateToken();
          } 
         
-        //$this->findLocation();  
         $this->view('HomePage/HomePage');
     }
-    
-    
-    /*private function findLocation() {
-        echo '<script type="text/javascript">
-                function getLocation() {
-                    if(navigator.geolocation) {
-                        navigator.permissions.query({name:\'geolocation\'})
-                            .then(function(permissionStatus) 
-                            {
-                                if(permissionStatus.state == \'prompt\' || permissionStatus.state == \'granted\') 
-                                {
-                                    navigator.geolocation.getCurrentPosition(function(position) 
-                                    {
-                                        document.cookie = "latitude =" + position.coords.latitude;
-                                        document.cookie = "longitude =" + position.coords.longitude;
-                                        location.href = "http://localhost/www.httpcafe.com/local"
-                                    });
-                                } 
-                                else if(permissionStatus.state == \'denied\') 
-                                {
-                                    alert(\'The GPS was blocked by the user!\');
-                                }
-                            },  function error(msg) {alert(\'Please enable your GPS position feature.\');},  
-                            {maximumAge:10000, timeout:5000, enableHighAccuracy: true});
-                    }
-                }
-              }
-            </script>';
-    }*/
 }
 
 class TokenGenerator 
