@@ -5,7 +5,7 @@
             <meta charset="UTF-8">  
             <title>1337-Cafe</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href= "http://localhost/www.httpcafe.com/css/LocalPage.css">
+            <link rel="stylesheet" href= "http://localhost/www.httpcafe.com/css/LocalPage1.css">
             <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
             <meta http-equiv="Pragma" content="no-cache" />
             <meta http-equiv="Expires" content="0" />
@@ -57,16 +57,19 @@
                    else 
                    {
                        $index = 0;
-                       if(in_array($i,$data))
+                       for($i = 1; $i < 11; $i++)
                        {
+                            if(in_array($i,$data))
+                            {
 
-                            echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat</span></div>';
-                            $index++;
-                       }
-                       else
-                       {
-                           echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber</span></div>';
-                       }
+                                    echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat</span></div>';
+                                    $index++;
+                            }
+                            else
+                            {
+                                echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber</span></div>';
+                            }
+                        }
                    }
                       ?>
                    <!--

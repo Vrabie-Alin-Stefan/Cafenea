@@ -1,6 +1,6 @@
 <?php
 
-class productsPageController extends Controller
+class productsPageController1 extends Controller
 {
     private function referer() {
         if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']!='')

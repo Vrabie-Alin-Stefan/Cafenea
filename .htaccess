@@ -1,4 +1,0 @@
-Options -MultiViews
-
-RewriteEngine On
-RewriteRule ^www\.httpcafe\.com/?(.*) http://localhost/ProiectWeb/mvc/public/$1 [L,NE]

@@ -1,6 +1,6 @@
 <?php
 
-class menuPageController extends Controller
+class menuPageController1 extends Controller
 {
     private function referer() {
         if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']!='')
@@ -107,7 +107,6 @@ class menuPageController extends Controller
             }
             $this->view('MenuPage/MenuPage');
 
-            //////////////////////////
         }
     }
 }

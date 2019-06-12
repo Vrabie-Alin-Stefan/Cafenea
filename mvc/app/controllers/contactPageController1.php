@@ -1,6 +1,6 @@
 <?php
 
-class contactPageController extends Controller
+class contactPageController1 extends Controller
 {
     public function index()
     {

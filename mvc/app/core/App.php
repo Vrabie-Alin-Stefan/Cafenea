@@ -13,12 +13,12 @@ class App
     {
         $url = $this->parseUrl();
 
-        if(file_exists('../app/controllers/' . $url[0] . 'PageController' . '.php'))
+        if(file_exists('../app/controllers/' . $url[0] . 'PageController1' . '.php'))
         {
-            $this->controller = $url[0] . 'PageController';
+            $this->controller = $url[0] . 'PageController1';
             unset($url[0]);
         }
-
+        
         require_once '../app/controllers/' . $this->controller . '.php';
 
         $this->controller = new $this->controller;

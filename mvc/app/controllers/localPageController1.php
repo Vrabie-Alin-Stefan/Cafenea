@@ -1,6 +1,6 @@
 <?php
 
-class confirmationPageController extends Controller
+class localPageController1 extends Controller
 {
     private function referer() {
         if(isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER']!='')
@@ -13,22 +13,22 @@ class confirmationPageController extends Controller
             }
             $ref_page = strtok('/'); 
             
-            if($ref_page == 'contact' || $ref_page == 'home' || $ref_page == 'menu') //Pagini care sunt tratate diferit 
+            if($ref_page == 'contact' || $ref_page == 'menu') //Pagini care sunt tratate diferit 
             {
-                $this->view('ConfirmationPage/ConfirmationPage');        
+                $this->view('LocalPage/LocalPage');        
             }
-            else if($ref_page != 'products' && $ref_page != 'error') // Pagini care nu pt fi accesate
+            else if($ref_page != 'home' && $ref_page != 'error') // Pagini care nu pt fi accesate
             {
                 echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/' . $ref_page . '"; </script>';
             } 
             else // Pagini care pot fi accesate
             {
-                return true;
+               return true;
             }
         } 
         else // cand nu este nici un referer
         {
-            $this->view('ConfirmationPage/ConfirmationPage');
+            $this->view('LocalPage/LocalPage');
             echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal.css">';
             echo 
                 '<div class="modal-overlay" id="modal-overlay"></div>
@@ -68,13 +68,78 @@ class confirmationPageController extends Controller
                 </script>';
         }
     }
-    
-    public function index($token = '')
+
+    public function index()
     {
-        if($this->referer()) {
-            //$local = $this->model('confirmationModel'); // $local este obiectul model
-            //$local->name = $token;
-            $this->view('ConfirmationPage/ConfirmationPage');
+        if($this->referer() == true) 
+        {
+            $ocupiedTables = [];
+            $table = $this->model('TableService'); // $local este obiectul model
+
+            
+            //echo '<br>' . htmlspecialchars($_SESSION['user_token']);
+            //echo '<br>' . $_COOKIE["latitude"];
+            //echo '<br>' . $_COOKIE["longitude"];
+            $longUser = 47.173876;
+            $latUser = 27.574791;
+
+
+            //-----------------Locatia facultatii------------------------------------------------------------
+            $long1 = 47.173916; 
+            $long4 = 47.173778;
+            
+            $lat1 = 27.574616;
+            $lat4 = 27.575081;
+            if($longUser < $long1 && $longUser > $long4)
+            {
+                if($latUser > $lat1 && $latUser < $lat4)
+                {
+                    $ocupiedTables = $table->GetOcupiedTables();
+                    $this->view('LocalPage/LocalPage', $ocupiedTables);
+                }
+                else
+                {
+                    header('Location: http://localhost/www.httpcafe.com/home'); 
+                }
+            }
+            else
+            {
+                header('Location: http://localhost/www.httpcafe.com/home'); 
+            }
         }
+        
+    }
+
+    public function AtomFeed()
+    {
+        //$tables = [];
+        $table = $this->model('TableService');
+        $users = $table->GetOcupiedTablesForFeed();
+        $xml = new SimpleXMLElement("<xml/>");
+        $feed = $xml->addChild('feed');
+        $feed->addChild('title', 'Cafe feed');
+        $feed->addChild('updated',  date("Y-m-d"));
+        $author = $feed->addChild('author');
+        $author->addChild('name','Vrabie Alin-Stefan');
+        $author->addChild('name','Adam Cristian');
+        $feed->addChild('id', '0');
+
+        for($index = 0; $index < count($users); $index++)
+        {
+            $entry = $feed->addChild('entry');
+            $entry->addChild('id', $users[$index]['id']);
+            $entry->addChild('title', $users[$index]['table']);
+            $entry->addChild('updated', $users[$index]['updated']);
+        }
+        $this->view('LocalPage/Atom', $xml);
+    }
+
+    public function JsonFeed()
+    {
+        //$tables = [];
+        $table = $this->model('TableService');
+        $users = $table->GetOcupiedTablesForFeed();
+        $json = json_encode($users);
+        $this->view('LocalPage/Json', $json);
     }
 }

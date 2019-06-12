@@ -3,7 +3,7 @@
             <link rel="icon" href="http://localhost/www.httpcafe.com/img/coffee-cup.png" type="image/x-icon"/>
             <meta charset="UTF-8">  
             <title>1337-Cafe</title>
-            <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/MenuPage.css">
+            <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/MenuPage1.css">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
             <meta http-equiv="Pragma" content="no-cache" />
@@ -28,7 +28,7 @@
 		<div id = "content">
             <div id = "presentation">
 				<div class = "item">
-					<div id = "photo1" onclick="location.href='http://localhost/www.httpcafe.com/products';"></div>
+					<div id = "photo1" onclick="location.href='http://localhost/www.httpcafe.com/products#Caffee';"></div>
 					<div class = "description">
 						<br>
 						Ce poate fi mai elegant decat servirea unei cafele fierbinti  <br>
@@ -41,10 +41,10 @@
 						Ce se potriveste mai bine la o iesire cu baietii decat o bere rece<br>
 						sau poate esti un adept al licorii lui Bacus
 					</div>
-					<div id = "photo2" onclick="location.href='http://localhost/www.httpcafe.com/products';"></div>
+					<div id = "photo2" onclick="location.href='http://localhost/www.httpcafe.com/products#Alchool';"></div>
 				</div>
 				<div class = "item">
-					<div id = "photo3" onclick="location.href='http://localhost/www.httpcafe.com/products';"></div>
+					<div id = "photo3" onclick="location.href='http://localhost/www.httpcafe.com/products#ColdDrinks';"></div>
 					<div class = "description">
 							<br>
 							Pentru oamenii fara vicii sau poate care doar doresc sa incerce diferite arome,<br>

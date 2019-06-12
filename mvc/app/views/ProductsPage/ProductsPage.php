@@ -5,7 +5,7 @@
         <link rel="icon" href="http://localhost/www.httpcafe.com/img/coffee-cup.png" type="image/x-icon"/>
         <meta charset="UTF-8">  
         <title>1337-Cafe</title>
-        <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ProductsPage.css">
+        <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ProductsPage1.css">
     </head>
     <body>
         <header>

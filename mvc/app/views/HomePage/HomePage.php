@@ -5,7 +5,7 @@
         <link rel="icon" href="http://localhost/www.httpcafe.com/img/coffee-cup.png" type="image/x-icon"/>
         <meta charset="UTF-8">  
         <title>1337-Cafe</title>
-        <link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/HomePage.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/HomePage1.css">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
@@ -13,6 +13,7 @@
     <body>
         <header>
             <a href="http://localhost/www.httpcafe.com/home"> <img id="logo" src="http://localhost/www.httpcafe.com/img/Logo2.jpg" alt="Logo"> </a>
+            
         </header>
         <div class="button">
             <div id="button1">
@@ -62,6 +63,10 @@
             </div>
         </div>
         <footer>
+            <div class="feed">
+                <a href="http://localhost/www.httpcafe.com/local/AtomFeed"><img src="http://localhost/www.httpcafe.com/img/Atom.jpg" style="width:25px;border-radius:25%"></a>
+                <a href="http://localhost/www.httpcafe.com/local/JsonFeed"><img src="http://localhost/www.httpcafe.com/img/Json.png" style="width:25px;border-radius:25%"></a>
+            </div>
             <p>Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
             <p>Contact information: <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a>.</p>
         </footer>

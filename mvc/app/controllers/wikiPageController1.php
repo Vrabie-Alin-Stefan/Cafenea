@@ -1,6 +1,6 @@
 <?php
 
-class wikiPageController extends Controller
+class wikiPageController1 extends Controller
 {
     public function index()
     {

@@ -4,7 +4,7 @@
         <link rel="icon" href="http://localhost/www.httpcafe.com/img/coffee-cup.png" type="image/x-icon"/>
         <meta charset="UTF-8">  
         <title>1337-Cafe</title>
-        <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ContactPage.css">
+        <link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ContactPage1.css">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />

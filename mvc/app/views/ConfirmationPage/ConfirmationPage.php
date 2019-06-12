@@ -4,7 +4,7 @@
         <link rel="icon" href="http://localhost/www.httpcafe.com/img/coffee-cup.png" type="image/x-icon"/>
         <meta charset="UTF-8">  
 		<title>1337-Cafe</title>
-		<link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ConfirmationPage.css">
+		<link rel="stylesheet" href="http://localhost/www.httpcafe.com/css/ConfirmationPage1.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	

@@ -134,8 +134,8 @@ nav img{
 
 .item #photo1
 {
-	height: 80%;
-	width: 30%;
+	height: 11vw;
+	width: 11vw;
 	margin-top: 4%;
 	background: url("../img/cafea.jpg");
 	background-size: cover;
@@ -144,8 +144,8 @@ nav img{
 }
 .item #photo2
 {
-	height: 80%;
-	width: 30%;
+	height: 11vw;
+	width: 11vw;
 	margin-top: 4%;
 	background-image: url("../img/bere.jpg");
 	background-size: cover;
@@ -154,8 +154,8 @@ nav img{
 }
 .item #photo3
 {
-	height: 80%;
-	width: 30%;
+	height: 11vw;
+	width: 11vw;
 	margin-top: 4%;
 	background-image: url("../img/racoritoare.jpg");
 	background-size: cover;

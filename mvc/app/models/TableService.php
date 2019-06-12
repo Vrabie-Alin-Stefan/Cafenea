@@ -51,9 +51,9 @@ class TableService
     {
         $sql = "UPDATE `user` SET numberTableOcupied=" . $masa . ", updated_at=" . time() . " WHERE token='" .$token . "'";
         if ($this->con->query($sql) === TRUE) {
-            echo '<script type="text/javascript"> console.log("Record updated successfully"); </script>';
+            //echo '<script type="text/javascript"> console.log("Record updated successfully"); </script>';
         } else {
-            echo "Error updating record: " . $this->con->error;
+            //echo "Error updating record: " . $this->con->error;
         }
     }
 
@@ -62,9 +62,9 @@ class TableService
         $sql = "UPDATE `user` SET numberTableOcupied = NULL, updated_at=" . time() . " WHERE token='" .$token . "'";
 
         if ($this->con->query($sql) === TRUE) {
-            echo '<script type="text/javascript"> console.log("Record updated successfully table"); </script>';
+            //echo '<script type="text/javascript"> console.log("Record updated successfully table"); </script>';
         } else {
-            echo "Error updating record: " . $this->con->error;
+            //echo "Error updating record: " . $this->con->error;
         }
     }
 
