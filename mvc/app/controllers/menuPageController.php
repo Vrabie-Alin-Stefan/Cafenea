@@ -89,17 +89,25 @@ class menuPageController extends Controller
                 echo '<script type="text/javascript"> console.log(' . $_SESSION['myTable'] . '); </script>';
                 $user->setUser($_SESSION['user_token']);
             } 
-            else if(isset($_SESSION['myTable'])) 
+            else if(!isset($_SESSION['myTable'])) 
             {
                 $_SESSION['myTable']=$masa;
             }
             $table = $this->model('TableService'); // $local este obiectul model
-            if($table->getTable($_SESSION['user_token']) == 0)
+            if(isset($_SESSION['myTable']))
             {
-                //echo $table->getTable($_SESSION['user_token']);
-                $table->SetTable($masa, $_SESSION['user_token']);
+                if($table->getTable($_SESSION['user_token']) == 0 )
+                {
+                    if($_SESSION['myTable'] != 0)
+                    {
+                        $_SESSION['myTable'] = $masa;
+                    }
+                    $table->SetTable($masa, $_SESSION['user_token']);
+                }
             }
             $this->view('MenuPage/MenuPage');
+
+            //////////////////////////
         }
     }
 }

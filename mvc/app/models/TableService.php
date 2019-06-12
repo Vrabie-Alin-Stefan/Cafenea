@@ -27,12 +27,24 @@ class TableService
     
     public function getTable($token)
     {
-        $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."' AND numberTableOcupied != NULL";
-        $result = $this->con->query($sql);
+        $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."'";
 
-        $num = $result->num_rows;
-        
-        return $num;
+        $result = $this->con->query($sql);
+        if ($row = $result->fetch_assoc()) 
+        {
+            if($row["numberTableOcupied"] == NULL)
+            {
+                echo 0;
+                return 0;
+            }
+            else
+            {
+                echo 1;
+                return 1;
+            }
+        }
+        echo 00;
+        return 0;
     }
 
     public function SetTable($masa, $token)
@@ -66,7 +78,7 @@ class TableService
             while($row = $result->fetch_assoc()) {
                 if(isset($row["numberTableOcupied"]))
                 {
-                    if(time() - $row["updated_at"] > 100)
+                    if(time() - $row["updated_at"] > 30)
                     {   
                         $this->removeTable($this->verifyToken($row["token"]));
                     }
@@ -92,7 +104,7 @@ class TableService
             while($row = $result->fetch_assoc()) {
                 if(isset($row["numberTableOcupied"]))
                 {
-                    if(time() - $row["updated_at"] > 100) //100 secunde
+                    if(time() - $row["updated_at"] > 30) //100 secunde
                     {
                         $this->removeTable($this->verifyToken($row["token"]));
                     }

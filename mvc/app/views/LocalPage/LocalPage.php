@@ -56,10 +56,17 @@
                    } 
                    else 
                    {
-                        for($i = 1; $i < 11; $i++)
-                        {  
-                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber' . $i . '</span></div>';
-                        }
+                       $index = 0;
+                       if(in_array($i,$data))
+                       {
+
+                            echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat' . $data[$index] . '</span></div>';
+                            $index++;
+                       }
+                       else
+                       {
+                           echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber' . $i . '</span></div>';
+                       }
                    }
                       ?>
                    <!--
