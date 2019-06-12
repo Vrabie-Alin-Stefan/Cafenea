@@ -4,6 +4,9 @@ class homePageController extends Controller
 {
     public function index()
     {
+        $user= $this->model('UserService');
+        $user->removeOldUsers();
+        
         session_start();
         
         if(!isset($_COOKIE['userCookie']))

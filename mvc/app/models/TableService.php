@@ -9,6 +9,22 @@ class TableService
         $this->con = $conn;
     }
 
+    private function verifyToken($user_token) 
+    {
+        $upgraded_token = "";
+        for($i=0;$i<strlen($user_token);$i++)
+        {
+            if($user_token[$i] === '\'' || $user_token[$i] === '\\')
+            {
+                $upgraded_token .= '\\' . $user_token[$i]; 
+            } else 
+            {
+                $upgraded_token .= $user_token[$i];
+            }
+        }
+        return $upgraded_token;
+    }
+    
     public function getTable($token)
     {
         $sql = "SELECT numberTableOcupied FROM `user` WHERE token='". $token ."' AND numberTableOcupied != NULL";
@@ -51,8 +67,8 @@ class TableService
                 if(isset($row["numberTableOcupied"]))
                 {
                     if(time() - $row["updated_at"] > 100)
-                    {
-                        $this->removeTable($row["token"]);
+                    {   
+                        $this->removeTable($this->verifyToken($row["token"]));
                     }
                     else
                     {
@@ -76,9 +92,9 @@ class TableService
             while($row = $result->fetch_assoc()) {
                 if(isset($row["numberTableOcupied"]))
                 {
-                    if(time() - $row["updated_at"] > 100)
+                    if(time() - $row["updated_at"] > 100) //100 secunde
                     {
-                        $this->removeTable($row["token"]);
+                        $this->removeTable($this->verifyToken($row["token"]));
                     }
                     else
                     {

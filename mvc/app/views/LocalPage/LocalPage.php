@@ -30,27 +30,37 @@
             <div id = "local">
                 <div id = "localImage">
                     <?php
-                   // session_start();
-                    $index = 0;
-                    for($i = 1; $i < 11; $i++)
-                    {
-                        if(in_array($i,$data))
+                   session_start();
+                   if(isset($_SESSION['myTable']))
+                   {
+                        $index = 0;
+                        for($i = 1; $i < 11; $i++)
                         {
-                            if($_SESSION['myTable'] == $data[$index])
+                            if(in_array($i,$data))
                             {
-                                echo '<div id = "masa' . $data[$index] . '"><span class = "myTable">Masa mea</span></div>';
+                                if($_SESSION['myTable'] == $data[$index])
+                                {
+                                    echo '<div id = "masa' . $data[$index] . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu\'"><span class = "myTable">Masa mea</span></div>';
+                                }
+                                else
+                                {
+                                    echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat' . $data[$index] . '</span></div>';
+                                }
+                                $index++;
                             }
                             else
                             {
-                                echo '<div id = "masa' . $data[$index] . '"><span class = "ocupat">Ocupat' . $data[$index] . '</span></div>';
+                                echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber' . $i . '</span></div>';
                             }
-                            $index++;
                         }
-                        else
-                        {
-                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\';"><span class = "liber">Liber' . $i . '</span></div>';
+                   } 
+                   else 
+                   {
+                        for($i = 1; $i < 11; $i++)
+                        {  
+                            echo '<div id = "masa' . $i . '" onclick="location.href=\'http://localhost/www.httpcafe.com/menu/ocupa/' . $i . '\'"><span class = "liber">Liber' . $i . '</span></div>';
                         }
-                    }
+                   }
                       ?>
                    <!--
                     <div id = "masa1" onclick="location.href='http://localhost/www.httpcafe.com/menu/ocupa/2';"><span class = "ocupat"></span></div>

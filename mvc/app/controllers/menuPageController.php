@@ -85,8 +85,13 @@ class menuPageController extends Controller
             $user = $this->model('UserService');
             if($user->getUser($_SESSION['user_token']) == 0)
             {
-                $_SESSION['myTable'] = $masa;
+                $_SESSION['myTable']=$masa;
+                echo '<script type="text/javascript"> console.log(' . $_SESSION['myTable'] . '); </script>';
                 $user->setUser($_SESSION['user_token']);
+            } 
+            else if(isset($_SESSION['myTable'])) 
+            {
+                $_SESSION['myTable']=$masa;
             }
             $table = $this->model('TableService'); // $local este obiectul model
             if($table->getTable($_SESSION['user_token']) == 0)

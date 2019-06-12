@@ -77,6 +77,12 @@ insert into Product (productName,price,productStock,created_at,updated_at) value
 
 -- UPDATE `user` SET numberTableOcupied = NULL WHERE token='eo0!5lQ*RL7g^c,jN/0QF?<]92%^)ncv';
 
+-- DELETE FROM `user` WHERE token='zfiK_b:zsiyH/qoG\'@?:4xPNN2\7_jZ^'
+-- DELETE FROM `user` WHERE token='siRDI"X\1,/BMj,:A2MS;yE$]%%.!?y;'
+-- DELETE FROM `user` WHERE token='yd*n6Z-^GXn5o0hLN;_>!+N</:LB#eXc'
+-- DELETE FROM `user` WHERE token='GYZy;!g\'XgEZ]Z\G9$+Md^?@>_9Li(VE'
+-- INSERT INTO `user` (`token`, `created_at`, `updated_at`) VALUES ('siRDI"X\\1,/BMj,:A2MS;yE$]%%.!?y;', now(), now())
+
 
 
 

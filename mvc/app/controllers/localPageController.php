@@ -78,17 +78,8 @@ class localPageController extends Controller
             $table = $this->model('TableService'); // $local este obiectul model
             $ocupiedTables = $table->GetOcupiedTables();
             
-            session_start();
-            $user=$this->model('UserService');
-            $value = $user->findUserTable($_SESSION['user_token']);
-            if(isset($value))
-            {
-                echo '<script type="text/javascript"> location.href = "http://localhost/www.httpcafe.com/menu"; </script>';
-            } 
-            else 
-            {
-                $this->view('LocalPage/LocalPage', $ocupiedTables);
-            }
+            $this->view('LocalPage/LocalPage', $ocupiedTables);
+            
             //echo '<br>' . htmlspecialchars($_SESSION['user_token']);
             //echo '<br>' . $_COOKIE["latitude"];
             //echo '<br>' . $_COOKIE["longitude"];

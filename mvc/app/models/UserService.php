@@ -9,6 +9,22 @@ class UserService
         $this->connection = $conn;
     }
     
+    private function verifyToken($user_token) 
+    {
+        $upgraded_token = "";
+        for($i=0;$i<strlen($user_token);$i++)
+        {
+            if($user_token[$i] === '\'' || $user_token[$i] === '\\')
+            {
+                $upgraded_token .= '\\' . $user_token[$i]; 
+            } else 
+            {
+                $upgraded_token .= $user_token[$i];
+            }
+        }
+        return $upgraded_token;
+    }
+
     public function getUser($token)
     {
         $sql = "SELECT id FROM `user` WHERE token='". $token ."'";
@@ -32,7 +48,6 @@ class UserService
     public function removeUser($token) 
     {
         $sql = "DELETE FROM `user` WHERE token='" .$token . "'";
-        
         if($this->connection->query($sql) === TRUE) {
             echo '<script type="text/javascript"> console.log("User deleted successfully"); </script>';
         } else {
@@ -47,5 +62,23 @@ class UserService
         
         $row = $result->fetch_assoc();
         return $row['numberTableOcupied'];
+    }
+    
+    public function removeOldUsers() 
+    {
+        $sql = "SELECT id,token,updated_at FROM `user`";
+        $result = $this->connection->query($sql);  
+        
+        if ($result->num_rows > 0) 
+        {
+            while($row = $result->fetch_assoc()) 
+            {
+                if(time() - $row["updated_at"] > 3600) // 1 ora
+                {
+                    echo htmlspecialchars($this->verifyToken($row["token"]));
+                    $this->removeUser($this->verifyToken($row["token"]));
+                }
+            }
+        }
     }
 }
