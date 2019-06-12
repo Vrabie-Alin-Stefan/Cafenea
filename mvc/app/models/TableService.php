@@ -49,13 +49,41 @@ class TableService
         $index = 0;
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                if(time() - $row["updated_at"] > 20)
+                if(time() - $row["updated_at"] > 100)
                 {
                     $this->RemoveTable($row["numberTableOcupied"]);
                 }
                 else
                 {
                     $tables[$index] = $row["numberTableOcupied"];
+                    $index++;
+                }
+                
+            }
+        }
+
+        return $tables;
+    }
+
+    public function GetOcupiedTablesForFeed()
+    {
+        $sql = "SELECT * FROM `user`";
+        $result = $this->con->query($sql);
+        $tables = [];
+        $index = 0;
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                if(time() - $row["updated_at"] > 100)
+                {
+                    $this->RemoveTable($row["numberTableOcupied"]);
+                }
+                else
+                {
+
+                    $tables[$index] = [];
+                    $tables[$index]['id'] = $row['id'];
+                    $tables[$index]['table'] = $row['numberTableOcupied'];
+                    $tables[$index]['updated'] = date("Y-m-d", $row['updated_at']);
                     $index++;
                 }
                 

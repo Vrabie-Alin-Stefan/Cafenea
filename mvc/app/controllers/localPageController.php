@@ -75,7 +75,6 @@ class localPageController extends Controller
             $table = $this->model('TableService'); // $local este obiectul model
             $ocupiedTables = $table->GetOcupiedTables();
 
-
             $this->view('LocalPage/LocalPage', $ocupiedTables);
             //echo '<br>' . htmlspecialchars($_SESSION['user_token']);
             //echo '<br>' . $_COOKIE["latitude"];
@@ -100,5 +99,38 @@ class localPageController extends Controller
         {
             $this->view('Errors/403Page');
         }*/
+    }
+
+    public function AtomFeed()
+    {
+        //$tables = [];
+        $table = $this->model('TableService');
+        $users = $table->GetOcupiedTablesForFeed();
+        $xml = new SimpleXMLElement("<xml/>");
+        $feed = $xml->addChild('feed');
+        $feed->addChild('title', 'Cafe feed');
+        $feed->addChild('updated',  date("Y-m-d"));
+        $author = $feed->addChild('author');
+        $author->addChild('name','Vrabie Alin-Stefan');
+        $author->addChild('name','Adam Cristian');
+        $feed->addChild('id', '0');
+
+        for($index = 0; $index < count($users); $index++)
+        {
+            $entry = $feed->addChild('entry');
+            $entry->addChild('id', $users[$index]['id']);
+            $entry->addChild('title', $users[$index]['table']);
+            $entry->addChild('updated', $users[$index]['updated']);
+        }
+        $this->view('LocalPage/Atom', $xml);
+    }
+
+    public function JsonFeed()
+    {
+        //$tables = [];
+        $table = $this->model('TableService');
+        $users = $table->GetOcupiedTablesForFeed();
+        $json = json_encode($users);
+        $this->view('LocalPage/Json', $json);
     }
 }
