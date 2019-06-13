@@ -61,7 +61,7 @@ class UserService
         if ($this->connection->query($sql) === TRUE) {
             echo '<script type="text/javascript"> console.log("Record updated successfully"); </script>';
         } else {
-            echo "Error updating record: " . $this->con->error;
+            echo "Error updating record: " . $this->connection->error;
         }
     }
     
