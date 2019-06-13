@@ -55,15 +55,13 @@
 		</div>
             <footer>
 				<p>Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
-				<p>Contact information: <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a>.</p>
+				<p>Contact information: <a href="mailto:1337Cafe@gmail.com">1337Cafe@gmail.com</a>.</p>
             </footer>
             <script type="text/javascript">
        
                 if(performance.navigation.type == 2){
                     var url = getCookie("url_previous_page"); 
-                    console.log(url);
                     var s = url.split('/');
-                    console.log(s[4]);
                     if(s[4] == "contact") {
                         location.href = "http://localhost/www.httpcafe.com/home";
                     } 

@@ -167,10 +167,18 @@ footer
 {
 	margin-top: 10vh;
 	margin-bottom: 0%;
-	background-color: black;
-	color: white;
+	background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+	color: floralwhite;
 	height: auto;
-
 	text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:#bfbfbf;
+}
+
+footer a:hover{
+    color: #e5ac23;
 }
 

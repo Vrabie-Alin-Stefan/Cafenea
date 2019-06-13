@@ -68,7 +68,7 @@
                 <a href="http://localhost/www.httpcafe.com/local/JsonFeed"><img src="http://localhost/www.httpcafe.com/img/Json.png" style="width:25px;border-radius:25%"></a>
             </div>
             <p>Proiect realizat de: Vrabie Alin-Stefan si Adam Cristian</p>
-            <p>Contact information: <a href="mailto:alinvs09@gmail.com">alinvs09@gmail.com</a>.</p>
+            <p>Contact information: <a href="mailto:1337Cafe@gmail.com">1337Cafe@gmail.com</a>.</p>
         </footer>
         <script type="text/javascript">
             document.cookie = "url_previous_page =" + window.location.href + "; path=/";

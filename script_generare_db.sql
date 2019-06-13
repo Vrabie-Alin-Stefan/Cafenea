@@ -63,7 +63,7 @@ insert into Product (productName,price,productStock,created_at,updated_at) value
 insert into Product (productName,price,productStock,created_at,updated_at) values ('Wine',12,(select floor(rand() * 100)+1),now(),now());
 insert into Product (productName,price,productStock,created_at,updated_at) values ('Peacon Pie',25,(select floor(rand() * 100)+1),now(),now());
 insert into Product (productName,price,productStock,created_at,updated_at) values ('Cheesecake',23,(select floor(rand() * 100)+1),now(),now());
-insert into Product (productName,price,productStock,created_at,updated_at) values ('Coffe Java',20,(select floor(rand() * 100)+1),now(),now());
+insert into Product (productName,price,productStock,created_at,updated_at) values ('Coffee Java',20,(select floor(rand() * 100)+1),now(),now());
 insert into Product (productName,price,productStock,created_at,updated_at) values ('Macaron',21,(select floor(rand() * 100)+1),now(),now());
 insert into Product (productName,price,productStock,created_at,updated_at) values ('Croissant',15,(select floor(rand() * 100)+1),now(),now());
 
@@ -83,6 +83,8 @@ insert into Product (productName,price,productStock,created_at,updated_at) value
 -- DELETE FROM `user` WHERE token='GYZy;!g\'XgEZ]Z\G9$+Md^?@>_9Li(VE'
 -- INSERT INTO `user` (`token`, `created_at`, `updated_at`) VALUES ('siRDI"X\\1,/BMj,:A2MS;yE$]%%.!?y;', now(), now())
 
+-- INSERT INTO `order` (`id_user`, `id_product`, `orderedQuantity`, `orderDate`, `billPrice`, `created_at`, `updated_at`) VALUES (3, 1, 1, now(), 5, now(), now())
+-- UPDATE product SET productStock=91, updated_at=now() WHERE productName='French Press'
 
 
 

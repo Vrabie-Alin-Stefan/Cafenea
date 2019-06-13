@@ -33,6 +33,15 @@ class UserService
         $num = $result->num_rows;       
         return $num;
     }
+    
+    public function getUserId($token)
+    {
+        $sql = "SELECT id FROM `user` WHERE token='". $token ."'";
+        $result = $this->connection->query($sql);
+
+        $row = $result->fetch_assoc();
+        return $row['id'];
+    }
 
     public function setUser($token)
     {
@@ -43,6 +52,17 @@ class UserService
         } else {
             echo "Error: " . $sql . "<br>" . $this->connection->error;
         }   
+    }
+    
+    public function setUserAge($token,$age)
+    {
+        $sql = "UPDATE `user` SET age=" . $age . ", updated_at=" . time() . " WHERE token='" . $token . "'";
+        
+        if ($this->connection->query($sql) === TRUE) {
+            echo '<script type="text/javascript"> console.log("Record updated successfully"); </script>';
+        } else {
+            echo "Error updating record: " . $this->con->error;
+        }
     }
     
     public function removeUser($token) 

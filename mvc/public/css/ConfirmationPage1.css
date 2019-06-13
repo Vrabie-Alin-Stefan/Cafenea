@@ -115,7 +115,7 @@ nav img{
 }
 
 
-.item .description
+.item #description
 {
 	height: 90%;
 	font-size: 1.3vw;
@@ -130,12 +130,12 @@ nav img{
 }
 
 @media (max-width: 500px) {
-	.item .description {
+	.item #description {
 		font-size: 2vw;
 	}
   }
   @media (max-width: 150px) {
-	.item .description {
+	.item #description {
 		font-size: 4vw;
 	}
   }
@@ -177,8 +177,17 @@ nav img{
 footer
 {
 	margin-bottom: 0%;
-	background-color: black;
-	color: white;
+	background: linear-gradient(to bottom, rgb(160, 77, 17), rgb(92, 44, 9));
+	color: floralwhite;
 	height: auto;
 	text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:#bfbfbf;
+}
+
+footer a:hover{
+    color: #e5ac23;
 }

@@ -351,9 +351,7 @@
         <script type="text/javascript">
             if(performance.navigation.type == 2){
                 var url = getCookie("url_previous_page"); 
-                console.log(url);
                 var s = url.split('/');
-                console.log(s[4]);
                 if(s[4] == "contact") {
                     location.href = "http://localhost/www.httpcafe.com/home";
                 } 
