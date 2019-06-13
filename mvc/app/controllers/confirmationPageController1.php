@@ -130,12 +130,12 @@ class confirmationPageController1 extends Controller
                 }
                 else
                 {
-                    echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/confirmation"; </script>';
+                    echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/products"; </script>';
                 }
             } 
             else
             {
-                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/confirmation"; </script>';
+                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/products"; </script>';
             }
         }
     }
