@@ -12,7 +12,7 @@ class confirmationPageController1 extends Controller
                 $ref_page = strtok('/');
             }
             $ref_page = strtok('/'); 
-            
+
             if($ref_page == 'contact' || $ref_page == 'home' || $ref_page == 'menu') //Pagini care sunt tratate diferit 
             {
                 $this->view('ConfirmationPage/ConfirmationPage');        
@@ -29,7 +29,7 @@ class confirmationPageController1 extends Controller
         else // cand nu este nici un referer
         {
             $this->view('ConfirmationPage/ConfirmationPage');
-            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal.css">';
+            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal1.css">';
             echo 
                 '<div class="modal-overlay" id="modal-overlay"></div>
                     <div class="modal" id="modal">
@@ -69,11 +69,20 @@ class confirmationPageController1 extends Controller
         }
     }
     
-    public function index($token = '')
+    public function index()
     {
         if($this->referer()) {
-            //$local = $this->model('confirmationModel'); // $local este obiectul model
-            //$local->name = $token;
+            
+            if(isset($_POST['age'])) {
+                echo '<script type="text/javascript"> console.log(' . $_POST['age'] . '); </script>';
+            }
+            if(isset($_POST['product'])) {
+                echo '<script type="text/javascript"> console.log("' . $_POST['product'] . '"); </script>';
+            }
+            if(isset($_POST['quantity'])) {
+                echo '<script type="text/javascript"> console.log(' . $_POST['quantity'] . '); </script>';
+            }
+            
             $this->view('ConfirmationPage/ConfirmationPage');
         }
     }

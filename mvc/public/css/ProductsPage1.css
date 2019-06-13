@@ -11,6 +11,7 @@ header{
     width: inherit;
     position: fixed;
     margin-top: -10vw;
+    z-index:1;
 }
 
 header::after{
@@ -109,7 +110,7 @@ body > h1{
     margin-left: 4%;
 }
 
-#Coffee{
+#coffee{
     margin-top: -277%;
 }
 
@@ -118,43 +119,84 @@ body > h1{
     color: #432309;
 }
 
-.product{
-    display: grid;
-    grid-template-columns: 20% 20% 10% 20% 15%;
-    grid-template-rows: 6vw;
-    margin-top: 0.6vw;
+
+.product {
+    margin-bottom: -2vw;
+    margin-top: -3vw;
 }
 
-
-.product div:last-child{
-    border: 0.2vw solid #9d5215;
+form{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
-.product p{
-    font-size:1.8vw;
+form #nume{
+    width: 20%;
+    height: 6vw;
     text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size:1.8vw;
     color: #432309;
+    font-family: serif;
 }
 
-.product a{
-    text-decoration: none;
+form label{
+    height: 6vw;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size:1.8vw;
+    color: #432309;
+    font-family: serif;
+    margin-top: 4vw;
+    margin-bottom: 0;
 }
 
-.product a p:hover, p:visited:hover{
-    color: #e5ac23;
+form #puncte{
+    width: 23%;
 }
 
-.product input{
+form #pret{
+    width: 7%;
+}
+
+form #cant{
+    width: 10%;
+}
+
+form #cantitate{
+    background-size: 10% 6vh;
     font-size: 1.8vw;
-    width: calc(10% + 17px); 
-    height: 10%; 
+    width: calc(2% + 17px); 
+    height: 20%; 
     background-color: #fff8e3;
 }
 
-.product input:invalid + span::after{
-  content: '\2715';
+form #cantitate:invalid + span::after{
+    display:inline-block;
+    content: '\2715';
+    transform: scale(1.4,4.2); 
+    z-index:0;
 }
 
-.product input:valid + span::after {
-  content: '\2713';
+form #cantitate:valid + span::after {
+    display:inline-block;
+    content: '\2713';
+    transform: scale(1.4,4); 
 }
+
+form #buton{
+    width: 15%;
+    height: 6vw;
+    border: 0.2vw solid #9d5215;
+    background-color: transparent;
+    text-align: center;
+    font-size:1.8vw;
+    color: #432309;
+    font-family: serif;
+    margin-left: 6%;
+    z-index:0;
+}
+

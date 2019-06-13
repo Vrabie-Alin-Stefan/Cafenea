@@ -17,7 +17,7 @@ class productsPageController1 extends Controller
             {
                 $this->view('ProductsPage/ProductsPage');        
             }
-            else if($ref_page != 'menu' && $ref_page != 'error') // Pagini care nu pt fi accesate
+            else if($ref_page != 'menu' && $ref_page != 'error' && $ref_page != 'products') // Pagini care nu pt fi accesate
             {
                 echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/' . $ref_page . '"; </script>';
             } 
@@ -29,7 +29,7 @@ class productsPageController1 extends Controller
         else // cand nu este nici un referer
         {
             $this->view('ProductsPage/ProductsPage');
-            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal.css">';
+            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal1.css">';
             echo 
                 '<div class="modal-overlay" id="modal-overlay"></div>
                     <div class="modal" id="modal">
@@ -71,19 +71,36 @@ class productsPageController1 extends Controller
     
     public function index()
     {
-        if($this->referer() == true) {
-            //$local = $this->model('ProductPageModel'); // $local este obiectul model
-            //$local->name = $token;
+        if($this->referer()) {
             $this->view('ProductsPage/ProductsPage');
         }
     }
 
-    public function meniul()
+    public function choose($type = '')
     {
-        if($this->referer() == true) {
-            //$meniu = $_GET['meniu'];
-            //$local = $this->model('ProductPageModel'); // $local este obiectul model
-            //$this->viewReferal('ProductsPage/ProductsPage', $meniu);
+        if($this->referer())
+        {
+            if($type == 'coffee' || $type == 'alchool' || $type == 'colddrinks') 
+            {
+                $this->view('ProductsPage/ProductsPage');
+                echo '<script type="text/javascript">
+                        var element = document.getElementById(\'' . $type . '\');
+                        element.scrollIntoView({behavior: "smooth"});
+                        if( window.localStorage ) {
+                            if( !localStorage.getItem(\'firstLoad\') ) {
+                                localStorage[\'firstLoad\'] = true;
+                                window.location.reload();
+                            }  else {
+                                localStorage.removeItem(\'firstLoad\');
+                            }
+                        }
+                    </script>';
+            }
+            else 
+            {
+                echo '<script type="text/javascript"> location.href="http://localhost/www.httpcafe.com/error/index/products"; </script>';
+            }
         }
+          
     }
 }

@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/models/TableService.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/menuPageController.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/core/App.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/HomePage/HomePage.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/ContactPage/ContactPage.php</file>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/Errors/403Page.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/ProductsPage/ProductsPage.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/init.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/MenuPage/MenuPage.php</file>
@@ -14,11 +16,14 @@
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/LocalPage/LocalPage.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/ConfirmationPage/ConfirmationPage.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/homePageController.php</file>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/models/UserService.php</file>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/LocalPage/Atom.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/contactPageController.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/public/.htaccess</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/confirmationPageController.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/productsPageController.php</file>
-            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/public/css/HomePage.css</file>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/errorPageController.php</file>
+            <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/views/LocalPage/Json.php</file>
             <file>file:/C:/xampp/htdocs/ProiectWeb/mvc/app/controllers/localPageController.php</file>
         </group>
     </open-files>

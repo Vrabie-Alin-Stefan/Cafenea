@@ -29,7 +29,7 @@ class menuPageController1 extends Controller
         else // cand nu este nici un referer
         {
             $this->view('MenuPage/MenuPage');
-            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal.css">';
+            echo '<link rel="stylesheet" type="text/css" href="http://localhost/www.httpcafe.com/css/modal1.css">';
             echo 
                 '<div class="modal-overlay" id="modal-overlay"></div>
                     <div class="modal" id="modal">

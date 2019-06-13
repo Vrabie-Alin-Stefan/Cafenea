@@ -28,7 +28,7 @@
 		<div id = "content">
             <div id = "presentation">
 				<div class = "item">
-					<div id = "photo1" onclick="location.href='http://localhost/www.httpcafe.com/products#Caffee';"></div>
+					<div id = "photo1" onclick="location.href='http://localhost/www.httpcafe.com/products/choose/coffee';"></div>
 					<div class = "description">
 						<br>
 						Ce poate fi mai elegant decat servirea unei cafele fierbinti  <br>
@@ -41,10 +41,10 @@
 						Ce se potriveste mai bine la o iesire cu baietii decat o bere rece<br>
 						sau poate esti un adept al licorii lui Bacus
 					</div>
-					<div id = "photo2" onclick="location.href='http://localhost/www.httpcafe.com/products#Alchool';"></div>
+					<div id = "photo2" onclick="location.href='http://localhost/www.httpcafe.com/products/choose/alchool';"></div>
 				</div>
 				<div class = "item">
-					<div id = "photo3" onclick="location.href='http://localhost/www.httpcafe.com/products#ColdDrinks';"></div>
+					<div id = "photo3" onclick="location.href='http://localhost/www.httpcafe.com/products/choose/colddrinks';"></div>
 					<div class = "description">
 							<br>
 							Pentru oamenii fara vicii sau poate care doar doresc sa incerce diferite arome,<br>

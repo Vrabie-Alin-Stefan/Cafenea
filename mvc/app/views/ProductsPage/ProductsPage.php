@@ -27,236 +27,325 @@
         <h1>Meniu</h1>
         <div class="menu">
             <img src="http://localhost/www.httpcafe.com/img/ImageMenu.jpg" alt="Menu Image">
-            <div class="submenu" id="Coffee">
+            <div class="submenu" id="coffee">
                 <div class="nameSubmenu"><p>Coffee</p></div>
                 <div class="product">
-                    <div><p>Drip</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Drip" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>French Press</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>7.5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="French Press" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">7.5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Vacuum Pot</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>8.5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Vacuum Pot" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">8.5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
             </div>
-            <div class="submenu" id="Espresso">
+            <div class="submenu" id="espresso">
                 <div class="nameSubmenu"><p>Espresso</p></div>
                 <div class="product">
-                    <div><p>Americano</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>10</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Americano" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">10</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Cafe Mocha</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>11</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Cafe Mocha" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">11</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Cafe Latte</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>12</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Cafe Latte" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">12</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Cappucino</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>10</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Cappucino" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">10</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
+                </div>
+               <div class="product">
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Frappucino" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">10</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Frappucino</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>10</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Caramel Macchiato" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">13</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Caramel Macchiato</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>13</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Mint Chocolate" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">10</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Mint Chocolate</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>10</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Espresso" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">9</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Espresso</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>9</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
-                </div>
-                <div class="product">
-                    <div><p>Vanilla Latte</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>11</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Vanilla Latte" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">11</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
             </div>
-            <div class="submenu" id="Tea">
+            <div class="submenu" id="tea">
                 <div class="nameSubmenu"><p>Tea</p></div>
                 <div class="product">
-                    <div><p>Earl Grey</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>5.75</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Earl Grey" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">5.75</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>English Breakfast</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>6.5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="English Breakfast" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">6.5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Green Tea</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>6.5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Green Tea" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">6.5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Jasmine Tea</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>6</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Jasmine Tea" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">6</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
             </div>
-            <div class="submenu" id="ColdDrinks">
+            <div class="submenu" id="colddrinks">
                 <div class="nameSubmenu"><p>Cold Drinks</p></div>
                 <div class="product">
-                    <div><p>Orange Juice</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>9</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Orange Juice" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">9</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Apple Juice</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>8</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Apple Juice" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">8</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Iced Latte</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>7</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Iced Latte" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">7</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Iced Mocha</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>6</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Iced Mocha" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">6</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Ice Tea</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Ice Tea" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Lemonade</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>10</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Lemonade" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">10</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Soda</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>5</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Soda" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">5</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
             </div>
-			
-			<div class="submenu" id="Alchool">
+            <div class="submenu" id="alchool">
                 <div class="nameSubmenu"><p>Alchool</p></div>
                 <div class="product">
-                    <div><p>Beer</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>7</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Beer" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">7</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="varsta" type="hidden" name="age"/>
+                        <input id="buton" type="submit" value="Comanda" onclick="return askAge();">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Wine</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>12</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Wine" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">12</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="varsta" type="hidden" name="age"/>
+                        <input id="buton" type="submit" value="Comanda" onclick="return askAge();">
+                    </form>
                 </div>
             </div>
-			
-            <div class="submenu" id="Sweets">
+            <div class="submenu" id="sweets">
                 <div class="nameSubmenu"><p>Sweets</p></div>
                 <div class="product">
-                    <div><p>Peacon Pie</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>25</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Peacon Pie" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">25</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Cheesecake</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>23</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Cheesecake" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">23</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Coffee Java</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>20</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Coffee Java" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">20</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Macaron</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>21</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Macaron" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">21</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
                 </div>
                 <div class="product">
-                    <div><p>Croissant</p></div>
-                    <div><p>.............................................</p></div>
-                    <div><p>15</p></div>
-                    <div><p>Cantitate: <input required type="number" name="quantity" min="1" max="9"><span class="validity"></span></p></div>
-                    <div><a href="http://localhost/www.httpcafe.com/confirmation"><p>Comanda</p></a></div>
-                </div>
-                
+                    <form action="http://localhost/www.httpcafe.com/confirmation" method="post">
+                        <input class="static" id="nume" type="text" name="product" value="Croissant" readonly="true"/>
+                        <label class="static" id="puncte">.............................................</label>
+                        <label class="static" id="pret">15</label>
+                        <label class="static" id="cant">Cantitate:</label>
+                        <input id="cantitate" required type="number" name="quantity" min="1" max="9"><span class="validity"></span>
+                        <input id="buton" type="submit" value="Comanda">
+                    </form>
+                </div> 
             </div>
         </div>
         <script type="text/javascript">
@@ -293,6 +382,17 @@
             }
                 
             document.cookie = "url_previous_page =" + window.location.href + "; path=/";
+            
+            function askAge() {
+                var age = prompt("Ce varsta aveti?", "Exemplu: 21");
+                if(age == null || age == '' || (parseInt(age) < 18)) {
+                    location.href = "http://localhost/www.httpcafe.com/error/products";
+                    return false;
+                } else {
+                    document.getElementById("varsta").value = age;
+                    return true;
+                }
+            }
         </script> 
     </body>
 </html>

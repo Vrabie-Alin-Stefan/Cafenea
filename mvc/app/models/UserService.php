@@ -75,7 +75,6 @@ class UserService
             {
                 if(time() - $row["updated_at"] > 3600) // 1 ora
                 {
-                    echo htmlspecialchars($this->verifyToken($row["token"]));
                     $this->removeUser($this->verifyToken($row["token"]));
                 }
             }
